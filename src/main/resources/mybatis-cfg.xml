@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- ==================== -->
+    <!--        别名           -->
+    <!-- ==================== -->
+    <typeAliases>
+        <typeAlias type="com.company.project.dao.popedomfunction.PopedomFunctionEO"         alias="PopedomFunctionEO"/>
+        <typeAlias type="com.company.project.dao.popedomrole.PopedomRoleEO"                 alias="PopedomRoleEO"/>
+        <typeAlias type="com.company.project.dao.popedomrolefunction.PopedomRoleFunctionEO" alias="PopedomRoleFunctionEO"/>
+        <typeAlias type="com.company.project.dao.useradmin.UserAdminEO"                     alias="UserAdminEO"/>
+    </typeAliases>
+    <!-- ==================== -->
+    <!--        插件           -->
+    <!-- ==================== -->
+    <plugins>
+        <plugin interceptor="com.github.miemiedev.mybatis.paginator.OffsetLimitInterceptor">
+            <property name="dialectClass" value="com.github.miemiedev.mybatis.paginator.dialect.MySQLDialect"/>
+        </plugin>
+        <plugin interceptor="com.company.db.interceptor.SqlCostInterceptor" />
+    </plugins>
+    <!-- ==================== -->
+    <!--        映射           -->
+    <!-- ==================== -->
+    <mappers>
+        <mapper resource="com/company/project/dao/popedomfunction/PopedomFunction.xml"/>
+        <mapper resource="com/company/project/dao/popedomrole/PopedomRole.xml"/>
+        <mapper resource="com/company/project/dao/popedomrolefunction/PopedomRoleFunction.xml"/>
+        <mapper resource="com/company/project/dao/useradmin/UserAdmin.xml"/>
+    </mappers>
+</configuration>
