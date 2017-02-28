@@ -5,7 +5,6 @@ import com.company.project.service.admin.AdminService;
 import com.company.project.web.pattern.action.BaseAction;
 import com.company.project.web.pattern.context.RequestContext;
 import com.github.miemiedev.mybatis.paginator.domain.PageList;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -36,15 +35,15 @@ public class Action_admin_list extends BaseAction<Map<String, Object>> {
 
         String ubLoginName = requestContext.getRequest().getParameter("ubLoginName");
         String pageNo = requestContext.getRequest().getParameter("pageNo");
-        if (StringUtils.trimToNull(pageNo) == null) {
+        if (pageNo == null) {
             pageNo = "1";
         }
         String pageSize = requestContext.getRequest().getParameter("pageSize");
-        if (StringUtils.trimToNull(pageSize) == null) {
+        if (pageSize == null) {
             pageSize = "10";
         }
 
-        PageList<UserAdminEO> uaEOLt = adminService.getAdminPageLt(StringUtils.trimToNull(ubLoginName), Integer.valueOf(pageNo), Integer.valueOf(pageSize));
+        PageList<UserAdminEO> uaEOLt = adminService.getAdminPageLt(ubLoginName, Integer.valueOf(pageNo), Integer.valueOf(pageSize));
         data.put("ubEOLt", uaEOLt);
         data.put("pageNo", uaEOLt.getPaginator().getPage());
         data.put("pageSize", uaEOLt.getPaginator().getLimit());

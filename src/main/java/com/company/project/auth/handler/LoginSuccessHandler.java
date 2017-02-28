@@ -5,7 +5,6 @@ import com.company.project.common.web.menu.Menu;
 import com.company.project.common.web.session.SessionUserInfo;
 import com.company.project.common.web.session.SessionUtil;
 import com.company.project.dao.popedomfunction.PopedomFunctionEO;
-import com.company.util.JsonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -74,7 +73,7 @@ public class LoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessH
 
             menuLt.add(menu);
         }
-        return JsonUtil.toJson(menuLt);
+        return "";
     }
     /**
      * 获取授权编号列表

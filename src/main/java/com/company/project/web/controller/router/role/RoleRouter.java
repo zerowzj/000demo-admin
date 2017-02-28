@@ -8,10 +8,8 @@ import com.company.project.service.function.FunctionService;
 import com.company.project.service.role.RoleService;
 import com.company.project.web.controller.action.role.Action_role_add;
 import com.company.project.web.pattern.action.ActionExecutor;
-import com.company.util.JsonUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.miemiedev.mybatis.paginator.domain.PageList;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -45,11 +43,11 @@ public class RoleRouter {
         Map<String, Object> model = new HashMap();
 
         String pageNo = request.getParameter("pageNo");
-        if (StringUtils.trimToNull(pageNo) == null) {
+        if (pageNo == null) {
             pageNo = "1";
         }
         String pageSize = request.getParameter("pageSize");
-        if (StringUtils.trimToNull(pageSize) == null) {
+        if (pageSize == null) {
             pageSize = "10";
         }
         PageList<PopedomRoleEO> pageLt = roleService.getRolePageLt(null, Integer.valueOf(pageNo), Integer.valueOf(pageSize));
@@ -108,7 +106,7 @@ public class RoleRouter {
             treeLt.add(zTree);
         }
 
-        model.put("tree", JsonUtil.toJson(treeLt));
+//        model.put("tree", JsonUtil.toJson(treeLt));
         model.put("prId", prId);
         return new ModelAndView("/role/funConf", model);
     }
