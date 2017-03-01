@@ -163,7 +163,6 @@ public class RoleController {
             ids.add(Long.parseLong(i.toString()));
         }
         //
-        roleService.addFunction(Long.valueOf(prId), ids);
         //
         return model;
     }

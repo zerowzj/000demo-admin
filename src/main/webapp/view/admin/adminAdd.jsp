@@ -13,19 +13,19 @@
     <div class="col-md-12 ">
         <!-- BEGIN SAMPLE FORM PORTLET-->
         <div class="portlet light ">
-            <%--      <div class="portlet-title">
-                      <div class="caption">
-                          <span class="caption-subject font-dark sbold">Horizontal Form</span>
-                      </div>
-                      <div class="actions">
-                          <div class="btn-group btn-group-devided" data-toggle="buttons">
-                              <label class="btn btn-transparent dark btn-outline btn-circle btn-sm active">
-                                  <input type="radio" name="options" class="toggle" id="option1">Actions</label>
-                              <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
-                                  <input type="radio" name="options" class="toggle" id="option2">Settings</label>
-                          </div>
-                      </div>
-                  </div>--%>
+            <div class="portlet-title">
+                <div class="caption">
+                    <span class="caption-subject font-dark sbold">Horizontal Form</span>
+                </div>
+                <div class="actions">
+                    <div class="btn-group btn-group-devided" data-toggle="buttons">
+                        <label class="btn btn-transparent dark btn-outline btn-circle btn-sm active">
+                            <input type="radio" name="options" class="toggle" id="option1">Actions</label>
+                        <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
+                            <input type="radio" name="options" class="toggle" id="option2">Settings</label>
+                    </div>
+                </div>
+            </div>
             <div class="portlet-body form">
                 <form class="form-horizontal" action="/admin/add" role="form">
                     <div class="form-body">
@@ -40,9 +40,6 @@
                             <div class="col-md-2">
                                 <div class="input-group">
                                     <input type="password" class="form-control">
-                                    <span class="input-group-addon">
-                                        <i class="fa fa-user"></i>
-                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -51,9 +48,6 @@
                             <div class="col-md-2">
                                 <div class="input-group">
                                     <input type="password" class="form-control">
-                                    <span class="input-group-addon">
-                                        <i class="fa fa-user"></i>
-                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -88,6 +82,12 @@
                                         停用
                                     </label>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">用户姓名</label>
+                            <div class="col-md-2">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
                     </div>

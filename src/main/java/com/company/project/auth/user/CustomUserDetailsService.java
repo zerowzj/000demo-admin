@@ -5,8 +5,6 @@ import com.company.project.dao.popedomfunction.PopedomFunctionDao;
 import com.company.project.dao.popedomfunction.PopedomFunctionEO;
 import com.company.project.dao.useradmin.UserAdminDao;
 import com.company.project.dao.useradmin.UserAdminEO;
-import com.company.project.dao.userbase.UserBaseDao;
-import com.company.project.dao.userbase.UserBaseEO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
