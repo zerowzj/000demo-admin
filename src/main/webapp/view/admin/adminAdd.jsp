@@ -7,192 +7,313 @@
 </head>
 <body>
 <div class="row">
-    <div class="col-md-34">
-        <!-- BEGIN EXAMPLE TABLE PORTLET-->
-        <div class="portlet light portlet-fit ">
-   <%--         <div class="portlet-title">
-       &lt;%&ndash;         <div class="caption">
-                    <i class="icon-settings font-red"></i>
-                    <span class="caption-subject font-red sbold uppercase">Editable Table</span>
+    <div class="col-md-10 ">
+        <!-- BEGIN SAMPLE FORM PORTLET-->
+        <div class="portlet light ">
+            <div class="portlet-title">
+                <div class="caption">
+                    <span class="caption-subject font-dark sbold">Horizontal Form</span>
                 </div>
                 <div class="actions">
                     <div class="btn-group btn-group-devided" data-toggle="buttons">
-                        <label class="btn btn-transparent red btn-outline btn-circle btn-sm active">
+                        <label class="btn btn-transparent dark btn-outline btn-circle btn-sm active">
                             <input type="radio" name="options" class="toggle" id="option1">Actions</label>
-                        <label class="btn btn-transparent red btn-outline btn-circle btn-sm">
+                        <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
                             <input type="radio" name="options" class="toggle" id="option2">Settings</label>
-                    </div>
-                </div>&ndash;%&gt;
-            </div>--%>
-            <div class="portlet-body">
-                <div class="table-toolbar">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="btn-group">
-                                <button id="sample_editable_1_new" class="btn green"> Add New
-                                    <i class="fa fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="btn-group pull-right">
-                                <button class="btn green btn-outline dropdown-toggle" data-toggle="dropdown">Tools
-                                    <i class="fa fa-angle-down"></i>
-                                </button>
-                                <ul class="dropdown-menu pull-right">
-                                    <li>
-                                        <a href="javascript:;"> Print </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;"> Save as PDF </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;"> Export to Excel </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="sample_editable_1_wrapper" class="dataTables_wrapper no-footer">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="dataTables_length" id="sample_editable_1_length"><label> <select
-                                    name="sample_editable_1_length" aria-controls="sample_editable_1"
-                                    class="form-control input-sm input-xsmall input-inline">
-                                <option value="5">5</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                                <option value="-1">All</option>
-                            </select> records</label></div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div id="sample_editable_1_filter" class="dataTables_filter"><label>Search:<input
-                                    type="search" class="form-control input-sm input-small input-inline" placeholder=""
-                                    aria-controls="sample_editable_1"></label></div>
-                        </div>
-                    </div>
-                    <div class="table-scrollable">
-                        <table class="table table-striped table-hover table-bordered dataTable no-footer"
-                               id="sample_editable_1" role="grid" aria-describedby="sample_editable_1_info">
-                            <thead>
-                            <tr role="row">
-                                <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1"
-                                    colspan="1" aria-sort="ascending"
-                                    aria-label=" Username : activate to sort column descending" style="width: 136px;">
-                                    Username
-                                </th>
-                                <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1"
-                                    colspan="1" aria-label=" Full Name : activate to sort column ascending"
-                                    style="width: 167px;"> Full Name
-                                </th>
-                                <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1"
-                                    colspan="1" aria-label=" Points : activate to sort column ascending"
-                                    style="width: 110px;"> Points
-                                </th>
-                                <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1"
-                                    colspan="1" aria-label=" Notes : activate to sort column ascending"
-                                    style="width: 107px;"> Notes
-                                </th>
-                                <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1"
-                                    colspan="1" aria-label=" Edit : activate to sort column ascending"
-                                    style="width: 86px;"> Edit
-                                </th>
-                                <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1"
-                                    colspan="1" aria-label=" Delete : activate to sort column ascending"
-                                    style="width: 111px;"> Delete
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-
-
-                            <tr role="row" class="odd">
-                                <td class="sorting_1"> alex</td>
-                                <td> Alex Nilson</td>
-                                <td> 1234</td>
-                                <td class="center"> power user</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            <tr role="row" class="even">
-                                <td class="sorting_1"> alex</td>
-                                <td> Alex Nilson</td>
-                                <td> 1234</td>
-                                <td class="center"> power user</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            <tr role="row" class="odd">
-                                <td class="sorting_1"> alex</td>
-                                <td> Alex Nilson</td>
-                                <td> 1234</td>
-                                <td class="center"> power user</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            <tr role="row" class="even">
-                                <td class="sorting_1"> gist124</td>
-                                <td> Nick Roberts</td>
-                                <td> 62</td>
-                                <td class="center"> new user</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            <tr role="row" class="odd">
-                                <td class="sorting_1"> goldweb</td>
-                                <td> Sergio Jackson</td>
-                                <td> 132</td>
-                                <td class="center"> elite user</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-5 col-sm-5">
-                            <div class="dataTables_info" id="sample_editable_1_info" role="status" aria-live="polite">
-                                Showing 1 to 5 of 8 entries
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-sm-7">
-                            <div class="dataTables_paginate paging_bootstrap_number" id="sample_editable_1_paginate">
-                                <ul class="pagination" style="visibility: visible;">
-                                    <li class="prev disabled"><a href="#" title="Prev"><i class="fa fa-angle-left"></i></a>
-                                    </li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li class="next"><a href="#" title="Next"><i class="fa fa-angle-right"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
+            <div class="portlet-body form">
+                <form class="form-horizontal" action="/admin/add" role="form">
+                    <div class="form-body">
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">用户名</label>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
+                                <span class="help-inline"> Inline help. </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">用户名</label>
+                            <div class="col-md-9">
+                                <div class="input-inline input-medium">
+                                    <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-user"></i>
+                                                            </span>
+                                        <input type="email" class="form-control" placeholder="Email Address"></div>
+                                </div>
+                                <span class="help-inline"> Inline help. </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">密码</label>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" placeholder="Password">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">确认密码</label>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" placeholder="Password">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">所属角色</label>
+                            <div class="col-md-4">
+                                <select class="form-control">
+                                    <option>请选择</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                    <option>Option 5</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Inline Help</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control input-inline input-medium"
+                                       placeholder="Enter text">
+                                <span class="help-inline"> Inline help. </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Input Group</label>
+                            <div class="col-md-9">
+                                <div class="input-inline input-medium">
+                                    <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-user"></i>
+                                                            </span>
+                                        <input type="email" class="form-control" placeholder="Email Address"></div>
+                                </div>
+                                <span class="help-inline"> Inline help. </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Email Address</label>
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-envelope"></i>
+                                                        </span>
+                                    <input type="email" class="form-control" placeholder="Email Address"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Left Icon</label>
+                            <div class="col-md-9">
+                                <div class="input-icon">
+                                    <i class="fa fa-bell-o"></i>
+                                    <input type="text" class="form-control" placeholder="Left icon"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Right Icon</label>
+                            <div class="col-md-9">
+                                <div class="input-icon right">
+                                    <i class="fa fa-microphone"></i>
+                                    <input type="text" class="form-control" placeholder="Right icon"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Icon Input in Group Input</label>
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    <div class="input-icon">
+                                        <i class="fa fa-lock fa-fw"></i>
+                                        <input id="newpassword" class="form-control" type="text" name="password"
+                                               placeholder="password"></div>
+                                    <span class="input-group-btn">
+                                                            <button id="genpassword" class="btn btn-success"
+                                                                    type="button">
+                                                                <i class="fa fa-arrow-left fa-fw"></i> Random</button>
+                                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Input With Spinner</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control spinner" placeholder="Password"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Static Control</label>
+                            <div class="col-md-9">
+                                <p class="form-control-static"> email@example.com </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Disabled</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" placeholder="Disabled" disabled=""></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Readonly</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" placeholder="Readonly" readonly=""></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Dropdown</label>
+                            <div class="col-md-9">
+                                <select class="form-control">
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                    <option>Option 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Multiple Select</label>
+                            <div class="col-md-9">
+                                <select multiple="" class="form-control">
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                    <option>Option 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Textarea</label>
+                            <div class="col-md-9">
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile" class="col-md-3 control-label">File input</label>
+                            <div class="col-md-9">
+                                <input type="file" id="exampleInputFile">
+                                <p class="help-block"> some help text here. </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Checkboxes</label>
+                            <div class="col-md-9">
+                                <div class="checkbox-list">
+                                    <label>
+                                        <div class="checker"><span><input type="checkbox"></span></div>
+                                        Checkbox 1 </label>
+                                    <label>
+                                        <div class="checker"><span><input type="checkbox"></span></div>
+                                        Checkbox 1 </label>
+                                    <label>
+                                        <div class="checker disabled"><span><input type="checkbox" disabled=""></span>
+                                        </div>
+                                        Disabled </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Inline Checkboxes</label>
+                            <div class="col-md-9">
+                                <div class="checkbox-list">
+                                    <label class="checkbox-inline">
+                                        <div class="checker" id="uniform-inlineCheckbox21"><span><input type="checkbox"
+                                                                                                        id="inlineCheckbox21"
+                                                                                                        value="option1"></span>
+                                        </div>
+                                        Checkbox 1 </label>
+                                    <label class="checkbox-inline">
+                                        <div class="checker" id="uniform-inlineCheckbox22"><span><input type="checkbox"
+                                                                                                        id="inlineCheckbox22"
+                                                                                                        value="option2"></span>
+                                        </div>
+                                        Checkbox 2 </label>
+                                    <label class="checkbox-inline">
+                                        <div class="checker disabled" id="uniform-inlineCheckbox23"><span><input
+                                                type="checkbox" id="inlineCheckbox23" value="option3"
+                                                disabled=""></span></div>
+                                        Disabled </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Radio</label>
+                            <div class="col-md-9">
+                                <div class="radio-list">
+                                    <label>
+                                        <div class="radio" id="uniform-optionsRadios22"><span><input type="radio"
+                                                                                                     name="optionsRadios"
+                                                                                                     id="optionsRadios22"
+                                                                                                     value="option1"
+                                                                                                     checked=""></span>
+                                        </div>
+                                        Option 1 </label>
+                                    <label>
+                                        <div class="radio" id="uniform-optionsRadios23"><span><input type="radio"
+                                                                                                     name="optionsRadios"
+                                                                                                     id="optionsRadios23"
+                                                                                                     value="option2"
+                                                                                                     checked=""></span>
+                                        </div>
+                                        Option 2 </label>
+                                    <label>
+                                        <div class="radio disabled" id="uniform-optionsRadios24"><span><input
+                                                type="radio" name="optionsRadios" id="optionsRadios24" value="option2"
+                                                disabled=""></span></div>
+                                        Disabled </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Inline Radio</label>
+                            <div class="col-md-9">
+                                <div class="radio-list">
+                                    <label class="radio-inline">
+                                        <div class="radio" id="uniform-optionsRadios25"><span><input type="radio"
+                                                                                                     name="optionsRadios"
+                                                                                                     id="optionsRadios25"
+                                                                                                     value="option1"
+                                                                                                     checked=""></span>
+                                        </div>
+                                        Option 1 </label>
+                                    <label class="radio-inline">
+                                        <div class="radio" id="uniform-optionsRadios26"><span class="checked"><input
+                                                type="radio" name="optionsRadios" id="optionsRadios26" value="option2"
+                                                checked=""></span></div>
+                                        Option 2 </label>
+                                    <label class="radio-inline">
+                                        <div class="radio disabled" id="uniform-optionsRadios27"><span><input
+                                                type="radio" name="optionsRadios" id="optionsRadios27" value="option3"
+                                                disabled=""></span></div>
+                                        Disabled </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="btn green">Submit</button>
+                                <button type="button" class="btn default">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <!-- END EXAMPLE TABLE PORTLET-->
+
     </div>
+</div>
 </div>
 </body>
 </html>

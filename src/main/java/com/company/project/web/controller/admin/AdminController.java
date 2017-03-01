@@ -29,6 +29,11 @@ public class AdminController {
         return new ModelAndView("/admin/adminAdd");
     }
 
+    @RequestMapping("/add")
+    public String add(HttpServletRequest request, HttpServletResponse response) {
+        return "redirect:/admin/toList";
+    }
+
     @RequestMapping("/toList")
     public ModelAndView toList(HttpServletRequest request, HttpServletResponse response) {
         return new ModelAndView("/admin/adminList");
