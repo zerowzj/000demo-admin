@@ -6,11 +6,16 @@
 <head>
 </head>
 <body>
+
+<h1 class="page-title small"> 用户管理
+    <small>新增用户</small>
+</h1>
+
 <div class="row">
-    <div class="col-md-10 ">
+    <div class="col-md-12 ">
         <!-- BEGIN SAMPLE FORM PORTLET-->
         <div class="portlet light ">
-            <div class="portlet-title">
+      <%--      <div class="portlet-title">
                 <div class="caption">
                     <span class="caption-subject font-dark sbold">Horizontal Form</span>
                 </div>
@@ -22,7 +27,7 @@
                             <input type="radio" name="options" class="toggle" id="option2">Settings</label>
                     </div>
                 </div>
-            </div>
+            </div>--%>
             <div class="portlet-body form">
                 <form class="form-horizontal" action="/admin/add" role="form">
                     <div class="form-body">
@@ -30,20 +35,6 @@
                             <label class="col-md-3 control-label">用户名</label>
                             <div class="col-md-3">
                                 <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
-                                <span class="help-inline"> Inline help. </span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">用户名</label>
-                            <div class="col-md-9">
-                                <div class="input-inline input-medium">
-                                    <div class="input-group">
-                                                            <span class="input-group-addon">
-                                                                <i class="fa fa-user"></i>
-                                                            </span>
-                                        <input type="email" class="form-control" placeholder="Email Address"></div>
-                                </div>
-                                <span class="help-inline"> Inline help. </span>
                             </div>
                         </div>
                         <div class="form-group">
@@ -81,8 +72,31 @@
                                 </select>
                             </div>
                         </div>
-
-
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">状态</label>
+                            <div class="col-md-9">
+                                <div class="radio-list">
+                                    <label class="radio-inline">
+                                        <div class="radio" id="uniform-optionsRadios251"><span><input type="radio"
+                                                                                                     name="optionsRadios"
+                                                                                                     id="optionsRadios251"
+                                                                                                     value="option1"
+                                                                                                     checked=""></span>
+                                        </div>
+                                        Option 1 </label>
+                                    <label class="radio-inline">
+                                        <div class="radio" id="uniform-optionsRadios261"><span class="checked"><input
+                                                type="radio" name="optionsRadios" id="optionsRadios261" value="option2"
+                                                checked=""></span></div>
+                                        Option 2 </label>
+                                    <label class="radio-inline">
+                                        <div class="radio disabled" id="uniform-optionsRadios271"><span><input
+                                                type="radio" name="optionsRadios" id="optionsRadios271" value="option3"
+                                                disabled=""></span></div>
+                                        Disabled </label>
+                                </div>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Inline Help</label>
                             <div class="col-md-9">

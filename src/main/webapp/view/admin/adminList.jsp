@@ -6,6 +6,9 @@
 <head>
 </head>
 <body>
+<h3 class="page-title"> 用户管理
+    <small>用户列表</small>
+</h3>
 <div class="row">
     <div class="col-md-34">
         <!-- BEGIN EXAMPLE TABLE PORTLET-->
