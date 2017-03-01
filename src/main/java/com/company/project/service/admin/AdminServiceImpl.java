@@ -14,6 +14,12 @@ public class AdminServiceImpl implements AdminService {
     @Autowired
     private UserAdminDao userAdminDao = null;
 
+
+    @Override
+    public void addAdmin(UserAdminEO uaEO) {
+
+    }
+
     @Override
     public PageList<UserAdminEO> getAdminPageLt(String prName, int pageNo, int pageSize) {
         return userAdminDao.getAdminPageLt(prName, pageNo, pageSize);

@@ -1,7 +1,6 @@
 package com.company.project.service.admin;
 
 import com.company.project.dao.useradmin.UserAdminEO;
-import com.company.project.dao.userbase.UserBaseEO;
 import com.github.miemiedev.mybatis.paginator.domain.PageList;
 
 /**
@@ -10,6 +9,8 @@ import com.github.miemiedev.mybatis.paginator.domain.PageList;
  * @author wangzhj
  */
 public interface AdminService {
+
+    public void addAdmin(UserAdminEO uaEO);
 
     /**
      * 查询角色
