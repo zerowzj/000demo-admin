@@ -24,6 +24,11 @@ public class AdminController {
     @Autowired
     private AdminService adminService = null;
 
+    @RequestMapping("/toAdd")
+    public ModelAndView toAdd(HttpServletRequest request, HttpServletResponse response) {
+        return new ModelAndView("/admin/adminAdd");
+    }
+
     @RequestMapping("/toList")
     public ModelAndView toList(HttpServletRequest request, HttpServletResponse response) {
         return new ModelAndView("/admin/adminList");

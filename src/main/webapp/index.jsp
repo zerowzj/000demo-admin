@@ -469,13 +469,13 @@
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a href="/admin/toList" class="nav-link ">
+                            <a href="/admin/toAdd" class="nav-link ">
                                 <span class="title">新增用户</span>
                                 <span class="selected"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/admin/list" class="nav-link ">
+                            <a href="/admin/toList" class="nav-link ">
                                 <span class="title">用户列表</span>
                                 <span class="selected"></span>
                             </a>
