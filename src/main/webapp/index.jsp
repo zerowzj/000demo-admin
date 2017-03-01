@@ -490,12 +490,17 @@
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item  ">
-                            <a href="ui_colors.html" class="nav-link ">
+                            <a href="/function/list" class="nav-link ">
+                                <span class="title">功能列表</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="/role/toAdd" class="nav-link ">
                                 <span class="title">新增角色</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="ui_colors.html" class="nav-link ">
+                            <a href="/role/list" class="nav-link ">
                                 <span class="title">角色列表</span>
                             </a>
                         </li>

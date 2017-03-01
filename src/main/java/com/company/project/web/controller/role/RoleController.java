@@ -1,4 +1,4 @@
-package com.company.project.web.controller.router.role;
+package com.company.project.web.controller.role;
 
 import com.company.project.common.tree.JSTree;
 import com.company.project.common.tree.ZTree;
@@ -31,7 +31,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/role")
-public class RoleRouter {
+public class RoleController {
 
     @Autowired
     private RoleService roleService = null;
