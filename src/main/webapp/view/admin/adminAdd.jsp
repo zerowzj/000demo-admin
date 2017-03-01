@@ -7,24 +7,23 @@
 </head>
 <body>
 <h3 class="page-title">
-    <small style="font-size:14px;">用户管理 >> 新增用户</small>
+    <small style="font-size:15px;">用户管理 >> 新增用户</small>
 </h3>
-<form class="form-horizontal" action="/admin/add" role="form">
 <div class="row">
     <div class="col-md-12 ">
         <div class="portlet light ">
             <div class="portlet-body form">
-
+                <form class="form-horizontal" action="/admin/add" role="form">
                     <div class="form-body">
                         <div class="form-group">
                             <label class="col-md-3 control-label">用户名</label>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <input type="text" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">密码</label>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <div class="input-group">
                                     <input type="password" class="form-control">
                                 </div>
@@ -32,7 +31,7 @@
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">确认密码</label>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <div class="input-group">
                                     <input type="password" class="form-control">
                                 </div>
@@ -40,10 +39,9 @@
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">所属角色</label>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <select class="form-control">
                                     <option>请选择</option>
-                                    <option>Option 1</option>
                                 </select>
                             </div>
                         </div>
@@ -73,7 +71,7 @@
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">用户姓名</label>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <input type="text" class="form-control">
                             </div>
                         </div>
@@ -86,11 +84,10 @@
                             </div>
                         </div>
                     </div>
-
+                </form>
             </div>
         </div>
     </div>
 </div>
-</form>
 </body>
 </html>
