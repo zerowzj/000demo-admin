@@ -6,9 +6,9 @@
 <head>
 </head>
 <body>
-<h5 class="page-title small"> 用户管理
-    <small>新增用户</small>
-</h5>
+<h3 class="page-title">
+    <small style="font-size:14px;">用户管理 >> 新增用户</small>
+</h3>
 <div class="row">
     <div class="col-md-12 ">
         <!-- BEGIN SAMPLE FORM PORTLET-->
@@ -32,7 +32,7 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label">用户名</label>
                             <div class="col-md-2">
-                                <input type="text" class="form-control input-large">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -73,19 +73,23 @@
                                     <label class="radio-inline">
                                         <div class="radio">
                                             <span>
-                                            <input type="radio" name="optionsRadios" value="option1">
+                                                <input type="radio" name="optionsRadios" value="option1">
                                             </span>
                                         </div>
-                                        启用</label>
+                                        启用
+                                    </label>
                                     <label class="radio-inline">
-                                        <div class="radio"><span ><input
-                                                type="radio" name="optionsRadios" value="option2"
-                                                checked="checked"></span></div>
-                                        停用</label>
+                                        <div class="radio">
+                                            <span>
+                                                <input type="radio" name="optionsRadios" value="option2"
+                                                       checked="checked">
+                                            </span>
+                                        </div>
+                                        停用
+                                    </label>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="form-actions">
                         <div class="row">
