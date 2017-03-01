@@ -30,7 +30,7 @@
                 <form class="form-horizontal" action="/admin/add" role="form">
                     <div class="form-body">
                         <div class="form-group">
-                            <label class="col-md-3 ">用户名</label>
+                            <label class="col-md-3 control-label">用户名</label>
                             <div class="col-md-2">
                                 <input type="text" class="form-control input-large">
                             </div>
