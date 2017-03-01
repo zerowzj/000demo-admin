@@ -65,12 +65,6 @@ public class RoleController {
         return new ModelAndView("/role/roleAdd");
     }
 
-    @RequestMapping("/add")
-    @ResponseBody
-    public Map<String, Object> add(HttpServletRequest request, HttpServletResponse response, PopedomRoleEO prEO) {
-        return ActionExecutor.execute(request, response, Action_role_add.class, prEO);
-    }
-
     @RequestMapping("/toConf")
     public ModelAndView toConf(HttpServletRequest request, HttpServletResponse response) {
         //

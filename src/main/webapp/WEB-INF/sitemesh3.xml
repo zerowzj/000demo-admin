@@ -4,6 +4,8 @@
     <!--        装饰          -->
     <!-- ==================== -->
     <mapping path="/admin/*"     decorator="/index.jsp"/>
+    <mapping path="/role/*"     decorator="/index.jsp"/>
+    <mapping path="/function/*"     decorator="/index.jsp"/>
 
     <!-- ==================== -->
     <!--        排除          -->
