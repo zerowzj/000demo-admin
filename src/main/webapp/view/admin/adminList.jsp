@@ -25,18 +25,22 @@
                 </div>
                 <div class="widget-body">
                     <div class="widget-main form-inline">
-                            <label class="inline">
-                                <span class="lbl">用户编号</span>
-                            </label>
-                            <input type="text" class="input-small" placeholder="Username" />
-                            <label class="inline">
-                                <span class="lbl">登录名</span>
-                            </label>
-                            <input type="password" class="input-small" placeholder="Password" />
-                            <button type="button" class="btn btn-info btn-sm">
-                                <i class="ace-icon fa fa-key bigger-110"></i>查询
-                            </button>
-                        </form>
+                        <label class="inline">
+                            <span class="lbl">用户编号</span>
+                        </label>
+                        <input type="text" class="form-control input-small" />
+                        <label class="inline">
+                            <span class="lbl">登录名</span>
+                        </label>
+                        <input type="password" class="form-control input-small" />
+                        <label class="inline">
+                            <span class="lbl">登录名</span>
+                        </label>
+                        <input type="password" class="form-control input-small" />
+
+                        <button type="button" class="btn btn-info btn-sm">
+                            <i class="ace-icon fa fa-key bigger-110"></i>Login
+                        </button>
                     </div>
                 </div>
             </div>
