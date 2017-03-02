@@ -6,88 +6,65 @@
 <head>
 </head>
 <body>
-<h3 class="page-title">
-    <small style="font-size:15px;">用户管理 >> 新增用户</small>
-</h3>
+<div class="page-header">
+    <h1>
+        用户管理
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            新增用户
+        </small>
+    </h1>
+</div>
 <div class="row">
-    <div class="col-md-12 ">
-        <div class="portlet light ">
-            <div class="portlet-body form">
-                <form class="form-horizontal" action="/admin/add" role="form">
-                    <div class="form-body">
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">用户名</label>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">密码</label>
-                            <div class="col-md-3">
-                                <div class="input-group">
-                                    <input type="password" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">确认密码</label>
-                            <div class="col-md-3">
-                                <div class="input-group">
-                                    <input type="password" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">所属角色</label>
-                            <div class="col-md-3">
-                                <select class="form-control">
-                                    <option>请选择</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">状态</label>
-                            <div class="col-md-9">
-                                <div class="radio-list">
-                                    <label class="radio-inline">
-                                        <div class="radio">
-                                            <span>
-                                                <input type="radio" name="optionsRadios" value="option1">
-                                            </span>
-                                        </div>
-                                        启用
-                                    </label>
-                                    <label class="radio-inline">
-                                        <div class="radio">
-                                            <span>
-                                                <input type="radio" name="optionsRadios" value="option2"
-                                                       checked="checked">
-                                            </span>
-                                        </div>
-                                        停用
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">用户姓名</label>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-actions">
-                        <div class="row">
-                            <div class="col-md-offset-3 col-md-9">
-                                <button type="submit" class="btn green">注册</button>
-                                <button type="reset" class="btn red">重置</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+    <div class="col-xs-12">
+        <form class="form-horizontal" action="/admin/add" method="post">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">用户名</label>
+                <div class="col-sm-9">
+                    <input type="text" placeholder="用户名" class="col-xs-10 col-sm-3">
+                </div>
             </div>
-        </div>
+
+            <div class="space-4"></div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" >密码</label>
+                <div class="col-sm-9">
+                    <input type="password" placeholder="密码" class="col-xs-10 col-sm-3">
+                </div>
+            </div>
+
+            <div class="space-4"></div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" >所属角色</label>
+                <div class="col-sm-9">
+                    <select class="col-xs-10 col-sm-4">
+                        <option value="">请选择</option>
+                        <option value="AL">Alabama</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="space-4"></div>
+
+            <div class="clearfix form-actions">
+                <div class="col-md-offset-3 col-md-9">
+                    <button class="btn btn-info" type="submit">
+                        <i class="ace-icon fa fa-check bigger-110"></i>
+                        Submit
+                    </button>
+                    &nbsp; &nbsp; &nbsp;
+                    <button class="btn" type="reset">
+                        <i class="ace-icon fa fa-undo bigger-110"></i>
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
+</body>
+</html>
 </body>
 </html>
