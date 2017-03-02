@@ -15,35 +15,40 @@
         <li class="active">用户列表</li>
     </ul>
 </div>
+
 <div class="page-content">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="widget-box">
+                <div class="widget-header">
+                    <h4 class="widget-title">Inline Forms</h4>
+                </div>
+                <div class="widget-body">
+                    <div class="widget-main form-inline">
+                            <label class="inline">
+                                <span class="lbl">用户编号</span>
+                            </label>
+                            <input type="text" class="input-small" placeholder="Username" />
+                            <label class="inline">
+                                <span class="lbl">登录名</span>
+                            </label>
+                            <input type="password" class="input-small" placeholder="Password" />
+                            <button type="button" class="btn btn-info btn-sm">
+                                <i class="ace-icon fa fa-key bigger-110"></i>查询
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-xs-12">
             <div>
-                <div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline no-footer">
-                    <div class="row form-horizontal">
-                        <div class="col-xs-12">
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right">用户名</label>
-                                <div class="col-sm-9">
-                                    <input type="text" placeholder="" class="col-xs-10 col-sm-12">
-                                </div>
-                            </div>
+                <div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline form-horizontal">
 
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right">用户名</label>
-                                <div class="col-sm-9">
-                                    <input type="text" placeholder="" class="col-xs-10 col-sm-12">
-                                </div>
-                            </div>
 
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right">用户名</label>
-                                <div class="col-sm-9">
-                                    <input type="text" placeholder="" class="col-xs-10 col-sm-12">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <table id="dynamic-table" class="table table-striped table-bordered table-hover dataTable no-footer"
                            role="grid" aria-describedby="dynamic-table_info">
                         <thead>
@@ -69,7 +74,7 @@
                                 用户姓名
                             </th>
                             <th class="hidden-480 sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1"
-                                colspan="1" aria-label="Status: activate to sort column ascending">用户姓名
+                                colspan="1" aria-label="Status: activate to sort column ascending">创建时间
                             </th>
                             <th class="sorting_disabled" rowspan="1" colspan="1" aria-label=""></th>
                         </tr>
