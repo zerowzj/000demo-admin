@@ -17,9 +17,9 @@
 </div>
 
 <div class="page-content">
-    <%--<div class="page-header">--%>
-    <%----%>
-    <%--</div>--%>
+    <div class="page-header">
+
+    </div>
     <div class="row">
         <div class="col-xs-12">
             <form class="form-horizontal" action="/admin/add" method="post">
@@ -29,14 +29,14 @@
                         <input type="text" placeholder="用户名" class="col-xs-10 col-sm-3">
                     </div>
                 </div>
-                <div class="space-4"></div>
+
                 <div class="form-group">
                     <label class="col-sm-3 control-label no-padding-right">密码</label>
                     <div class="col-sm-9">
                         <input type="password" placeholder="密码" class="col-xs-10 col-sm-3">
                     </div>
                 </div>
-                <div class="space-4"></div>
+
                 <div class="form-group">
                     <label class="col-sm-3 control-label no-padding-right">所属角色</label>
                     <div class="col-sm-9">
@@ -46,7 +46,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="space-4"></div>
+
                 <div class="clearfix form-actions">
                     <div class="col-md-offset-3 col-md-9">
                         <button class="btn btn-info" type="submit">

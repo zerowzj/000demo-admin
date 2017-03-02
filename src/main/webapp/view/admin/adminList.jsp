@@ -20,22 +20,27 @@
         <div class="col-xs-12">
             <div>
                 <div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline no-footer">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <div class="dataTables_length" id="dynamic-table_length"><label>Display <select
-                                    name="dynamic-table_length" aria-controls="dynamic-table"
-                                    class="form-control input-sm">
-                                <option value="10">10</option>
-                                <option value="25">25</option>
-                                <option value="50">50</option>
-                                <option value="100">100</option>
-                            </select> records</label></div>
-                        </div>
-                        <div class="col-xs-6">
-                            <div id="dynamic-table_filter" class="dataTables_filter"><label>Search:<input type="search"
-                                                                                                          class="form-control input-sm"
-                                                                                                          placeholder=""
-                                                                                                          aria-controls="dynamic-table"></label>
+                    <div class="row form-horizontal">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right">用户名</label>
+                                <div class="col-sm-9">
+                                    <input type="text" placeholder="" class="col-xs-10 col-sm-12">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right">用户名</label>
+                                <div class="col-sm-9">
+                                    <input type="text" placeholder="" class="col-xs-10 col-sm-12">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right">用户名</label>
+                                <div class="col-sm-9">
+                                    <input type="text" placeholder="" class="col-xs-10 col-sm-12">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -290,8 +295,6 @@
                                     class="form-control input-sm">
                                 <option value="10">10</option>
                                 <option value="25">25</option>
-                                <option value="50">50</option>
-                                <option value="100">100</option>
                             </select> records</label></div>
                         </div>
                         <div class="col-xs-4">
