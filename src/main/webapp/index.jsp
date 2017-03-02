@@ -2,1154 +2,2536 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-        <meta charset="utf-8" />
-        <title>Metronic | Dashboard</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="" name="description" />
-        <meta content="" name="author" />
-        <!-- BEGIN GLOBAL MANDATORY STYLES -->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-        <link href="../static/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="../static/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="../static/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="../static/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
-        <link href="../static/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
-        <!-- END GLOBAL MANDATORY STYLES -->
-        <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <link href="../static/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" type="text/css" />
-        <link href="../static/assets/global/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
-        <link href="../static/assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css" />
-        <link href="../static/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" />
-        <!-- END PAGE LEVEL PLUGINS -->
-        <!-- BEGIN THEME GLOBAL STYLES -->
-        <link href="../static/assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
-        <link href="../static/assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
-        <!-- END THEME GLOBAL STYLES -->
-        <!-- BEGIN THEME LAYOUT STYLES -->
-        <link href="../static/assets/layouts/layout2/css/layout.min.css" rel="stylesheet" type="text/css" />
-        <link href="../static/assets/layouts/layout2/css/themes/blue.min.css" rel="stylesheet" type="text/css" id="style_color" />
-        <link href="../static/assets/layouts/layout2/css/custom.min.css" rel="stylesheet" type="text/css" />
-        <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>Dashboard - Ace Admin</title>
+
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/components/font-awesome/css/font-awesome.css" />
+
+    <!-- page specific plugin styles -->
+
+    <!-- text fonts -->
+    <link rel="stylesheet" href="/static/assets/css/ace-fonts.css" />
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="/static/assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="/static/assets/css/ace-part2.css" class="ace-main-stylesheet" />
+    <![endif]-->
+    <link rel="stylesheet" href="/static/assets/css/ace-skins.css" />
+    <link rel="stylesheet" href="/static/assets/css/ace-rtl.css" />
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="/static/assets/css/ace-ie.css" />
+    <![endif]-->
+
+    <!-- inline styles related to this page -->
+
+    <!-- ace settings handler -->
+    <script src="/static/assets/js/ace-extra.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+    <!--[if lte IE 8]>
+    <script src="/static/components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="/static/components/respond/dest/respond.min.js"></script>
+    <![endif]-->
     </head>
 
-<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid">
-<!-- BEGIN HEADER -->
-<div class="page-header navbar navbar-fixed-top">
-    <!-- BEGIN HEADER INNER -->
-    <div class="page-header-inner ">
-        <!-- BEGIN LOGO -->
-        <div class="page-logo">
-            <a href="/index.jsp">
-                <img src="../static/assets/layouts/layout2/img/logo-default.png" alt="logo" class="logo-default" />
+<body class="no-skin">
+<!-- #section:basics/navbar.layout -->
+<div id="navbar" class="navbar navbar-default          ace-save-state">
+    <div class="navbar-container ace-save-state" id="navbar-container">
+        <!-- #section:basics/sidebar.mobile.toggle -->
+        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+            <span class="sr-only">Toggle sidebar</span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+        </button>
+
+        <!-- /section:basics/sidebar.mobile.toggle -->
+        <div class="navbar-header pull-left">
+            <!-- #section:basics/navbar.layout.brand -->
+            <a href="#" class="navbar-brand">
+                <small>
+                    <i class="fa fa-leaf"></i>
+                    Ace Admin
+                </small>
             </a>
-            <div class="menu-toggler sidebar-toggler">
-                <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
-            </div>
+
+            <!-- /section:basics/navbar.layout.brand -->
+
+            <!-- #section:basics/navbar.toggle -->
+
+            <!-- /section:basics/navbar.toggle -->
         </div>
-        <!-- END LOGO -->
-        <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">sss</a>
-        <!-- END RESPONSIVE MENU TOGGLER -->
-        <!-- BEGIN PAGE ACTIONS -->
-        <!-- DOC: Remove "hide" class to enable the page header actions -->
-        <div class="page-actions">
-            <%--<div class="btn-group">
-                <button type="button" class="btn btn-circle btn-outline red dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-plus"></i>&nbsp;
-                    <span class="hidden-sm hidden-xs">New&nbsp;</span>&nbsp;
-                    <i class="fa fa-angle-down"></i>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li>
-                        <a href="javascript:;">
-                            <i class="icon-docs"></i> New Post </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="icon-tag"></i> New Comment </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="icon-share"></i> Share </a>
-                    </li>
-                    <li class="divider"> </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="icon-flag"></i> Comments
-                            <span class="badge badge-success">4</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="icon-users"></i> Feedbacks
-                            <span class="badge badge-danger">2</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>--%>
-        </div>
-        <!-- END PAGE ACTIONS -->
-        <!-- BEGIN PAGE TOP -->
-        <div class="page-top">
-            <!-- BEGIN HEADER SEARCH BOX -->
-            <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
-           <%-- <form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search..." name="query">
-                    <span class="input-group-btn">
-                                <a href="javascript:;" class="btn submit">
-                                    <i class="icon-magnifier"></i>
-                                </a>
-                            </span>
-                </div>
-            </form>--%>
-            <!-- END HEADER SEARCH BOX -->
-            <!-- BEGIN TOP NAVIGATION MENU -->
-            <div class="top-menu">
-                <ul class="nav navbar-nav pull-right">
-                    <!-- BEGIN NOTIFICATION DROPDOWN -->
-                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <i class="icon-bell"></i>
-                            <span class="badge badge-default"> 7 </span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="external">
-                                <h3>
-                                    <span class="bold">12 pending</span> notifications</h3>
-                                <a href="page_user_profile_1.html">view all</a>
-                            </li>
-                            <li>
-                                <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
-                                    <li>
-                                        <a href="javascript:;">
-                                            <span class="time">just now</span>
-                                            <span class="details">
-                                                        <span class="label label-sm label-icon label-success">
-                                                            <i class="fa fa-plus"></i>
-                                                        </span> New user registered. </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                            <span class="time">3 mins</span>
-                                            <span class="details">
-                                                        <span class="label label-sm label-icon label-danger">
-                                                            <i class="fa fa-bolt"></i>
-                                                        </span> Server #12 overloaded. </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                            <span class="time">10 mins</span>
-                                            <span class="details">
-                                                        <span class="label label-sm label-icon label-warning">
-                                                            <i class="fa fa-bell-o"></i>
-                                                        </span> Server #2 not responding. </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                            <span class="time">14 hrs</span>
-                                            <span class="details">
-                                                        <span class="label label-sm label-icon label-info">
-                                                            <i class="fa fa-bullhorn"></i>
-                                                        </span> Application error. </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                            <span class="time">2 days</span>
-                                            <span class="details">
-                                                        <span class="label label-sm label-icon label-danger">
-                                                            <i class="fa fa-bolt"></i>
-                                                        </span> Database overloaded 68%. </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                            <span class="time">3 days</span>
-                                            <span class="details">
-                                                        <span class="label label-sm label-icon label-danger">
-                                                            <i class="fa fa-bolt"></i>
-                                                        </span> A user IP blocked. </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                            <span class="time">4 days</span>
-                                            <span class="details">
-                                                        <span class="label label-sm label-icon label-warning">
-                                                            <i class="fa fa-bell-o"></i>
-                                                        </span> Storage Server #4 not responding dfdfdfd. </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                            <span class="time">5 days</span>
-                                            <span class="details">
-                                                        <span class="label label-sm label-icon label-info">
-                                                            <i class="fa fa-bullhorn"></i>
-                                                        </span> System Error. </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                            <span class="time">9 days</span>
-                                            <span class="details">
-                                                        <span class="label label-sm label-icon label-danger">
-                                                            <i class="fa fa-bolt"></i>
-                                                        </span> Storage server failed. </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- END NOTIFICATION DROPDOWN -->
-                    <!-- BEGIN INBOX DROPDOWN -->
-                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <i class="icon-envelope-open"></i>
-                            <span class="badge badge-default"> 4 </span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="external">
-                                <h3>You have
-                                    <span class="bold">7 New</span> Messages</h3>
-                                <a href="app_inbox.html">view all</a>
-                            </li>
-                            <li>
-                                <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
-                                    <li>
-                                        <a href="#">
-                                                    <span class="photo">
-                                                        <img src="../assets/layouts/layout3/img/avatar2.jpg" class="img-circle" alt=""> </span>
-                                            <span class="subject">
-                                                        <span class="from"> Lisa Wong </span>
-                                                        <span class="time">Just Now </span>
-                                                    </span>
-                                            <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                                    <span class="photo">
-                                                        <img src="../assets/layouts/layout3/img/avatar3.jpg" class="img-circle" alt=""> </span>
-                                            <span class="subject">
-                                                        <span class="from"> Richard Doe </span>
-                                                        <span class="time">16 mins </span>
-                                                    </span>
-                                            <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                                    <span class="photo">
-                                                        <img src="../assets/layouts/layout3/img/avatar1.jpg" class="img-circle" alt=""> </span>
-                                            <span class="subject">
-                                                        <span class="from"> Bob Nilson </span>
-                                                        <span class="time">2 hrs </span>
-                                                    </span>
-                                            <span class="message"> Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                                    <span class="photo">
-                                                        <img src="../assets/layouts/layout3/img/avatar2.jpg" class="img-circle" alt=""> </span>
-                                            <span class="subject">
-                                                        <span class="from"> Lisa Wong </span>
-                                                        <span class="time">40 mins </span>
-                                                    </span>
-                                            <span class="message"> Vivamus sed auctor 40% nibh congue nibh... </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                                    <span class="photo">
-                                                        <img src="../assets/layouts/layout3/img/avatar3.jpg" class="img-circle" alt=""> </span>
-                                            <span class="subject">
-                                                        <span class="from"> Richard Doe </span>
-                                                        <span class="time">46 mins </span>
-                                                    </span>
-                                            <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- END INBOX DROPDOWN -->
-                    <!-- BEGIN TODO DROPDOWN -->
-                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-extended dropdown-tasks" id="header_task_bar">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <i class="icon-calendar"></i>
-                            <span class="badge badge-default"> 3 </span>
-                        </a>
-                        <ul class="dropdown-menu extended tasks">
-                            <li class="external">
-                                <h3>You have
-                                    <span class="bold">12 pending</span> tasks</h3>
-                                <a href="app_todo.html">view all</a>
-                            </li>
-                            <li>
-                                <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
-                                    <li>
-                                        <a href="javascript:;">
-                                                    <span class="task">
-                                                        <span class="desc">New release v1.2 </span>
-                                                        <span class="percent">30%</span>
-                                                    </span>
-                                            <span class="progress">
-                                                        <span style="width: 40%;" class="progress-bar progress-bar-success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="sr-only">40% Complete</span>
-                                                        </span>
-                                                    </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                                    <span class="task">
-                                                        <span class="desc">Application deployment</span>
-                                                        <span class="percent">65%</span>
-                                                    </span>
-                                            <span class="progress">
-                                                        <span style="width: 65%;" class="progress-bar progress-bar-danger" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="sr-only">65% Complete</span>
-                                                        </span>
-                                                    </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                                    <span class="task">
-                                                        <span class="desc">Mobile app release</span>
-                                                        <span class="percent">98%</span>
-                                                    </span>
-                                            <span class="progress">
-                                                        <span style="width: 98%;" class="progress-bar progress-bar-success" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="sr-only">98% Complete</span>
-                                                        </span>
-                                                    </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                                    <span class="task">
-                                                        <span class="desc">Database migration</span>
-                                                        <span class="percent">10%</span>
-                                                    </span>
-                                            <span class="progress">
-                                                        <span style="width: 10%;" class="progress-bar progress-bar-warning" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="sr-only">10% Complete</span>
-                                                        </span>
-                                                    </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                                    <span class="task">
-                                                        <span class="desc">Web server upgrade</span>
-                                                        <span class="percent">58%</span>
-                                                    </span>
-                                            <span class="progress">
-                                                        <span style="width: 58%;" class="progress-bar progress-bar-info" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="sr-only">58% Complete</span>
-                                                        </span>
-                                                    </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                                    <span class="task">
-                                                        <span class="desc">Mobile development</span>
-                                                        <span class="percent">85%</span>
-                                                    </span>
-                                            <span class="progress">
-                                                        <span style="width: 85%;" class="progress-bar progress-bar-success" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="sr-only">85% Complete</span>
-                                                        </span>
-                                                    </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                                    <span class="task">
-                                                        <span class="desc">New UI release</span>
-                                                        <span class="percent">38%</span>
-                                                    </span>
-                                            <span class="progress progress-striped">
-                                                        <span style="width: 38%;" class="progress-bar progress-bar-important" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="sr-only">38% Complete</span>
-                                                        </span>
-                                                    </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- END TODO DROPDOWN -->
-                    <!-- BEGIN USER LOGIN DROPDOWN -->
-                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-user">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <img alt="" class="img-circle" src="../static/assets/layouts/layout2/img/avatar3_small.jpg" />
-                            <span class="username username-hide-on-mobile"> Nick </span>
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-default">
-                            <li>
-                                <a href="page_user_profile_1.html">
-                                    <i class="icon-user"></i> 个人信息 </a>
-                            </li>
-                            <li>
-                                <a href="app_calendar.html">
-                                    <i class="icon-calendar"></i> 修改密码 </a>
-                            </li>
-                            <li class="divider"> </li>
-                            <li>
-                                <a href="page_user_lock_1.html">
-                                    <i class="icon-lock"></i> 锁屏 </a>
-                            </li>
-                            <li>
-                                <a href="page_user_login_1.html">
-                                    <i class="icon-key"></i> 注销</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- END USER LOGIN DROPDOWN -->
-                    <!-- BEGIN QUICK SIDEBAR TOGGLER -->
-                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-extended quick-sidebar-toggler">
-                        <%--<span class="sr-only">Toggle Quick Sidebar</span>
-                        <i class="icon-logout">123123</i>--%>
-                    </li>
-                    <!-- END QUICK SIDEBAR TOGGLER -->
-                </ul>
-            </div>
-            <!-- END TOP NAVIGATION MENU -->
-        </div>
-        <!-- END PAGE TOP -->
-    </div>
-    <!-- END HEADER INNER -->
-</div>
-<!-- END HEADER -->
-<!-- BEGIN HEADER & CONTENT DIVIDER -->
-<div class="clearfix"> </div>
-<!-- END HEADER & CONTENT DIVIDER -->
-<!-- BEGIN CONTAINER -->
-<div class="page-container">
-    <!-- BEGIN SIDEBAR -->
-    <div class="page-sidebar-wrapper">
-        <!-- END SIDEBAR -->
-        <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-        <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-        <div class="page-sidebar navbar-collapse collapse">
-            <!-- BEGIN SIDEBAR MENU -->
-            <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-            <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-            <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-            <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-            <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-            <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-            <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="false" data-slide-speed="2">
-                <li class="nav-item">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-                        <i class="icon-home"></i>
-                        <span class="title">用户管理</span>
-                        <span class="selected"></span>
-                        <span class="arrow open"></span>
+
+        <!-- #section:basics/navbar.dropdown -->
+        <div class="navbar-buttons navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li class="grey dropdown-modal">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="ace-icon fa fa-tasks"></i>
+                        <span class="badge badge-grey">4</span>
                     </a>
-                    <ul class="sub-menu">
-                        <li class="nav-item">
-                            <a href="/admin/toAdd" class="nav-link ">
-                                <span class="title">新增用户</span>
-                                <span class="selected"></span>
-                            </a>
+
+                    <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header">
+                            <i class="ace-icon fa fa-check"></i>
+                            4 Tasks to complete
                         </li>
-                        <li class="nav-item">
-                            <a href="/admin/toList" class="nav-link ">
-                                <span class="title">用户列表</span>
-                                <span class="selected"></span>
+
+                        <li class="dropdown-content">
+                            <ul class="dropdown-menu dropdown-navbar">
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix">
+                                            <span class="pull-left">Software Update</span>
+                                            <span class="pull-right">65%</span>
+                                        </div>
+
+                                        <div class="progress progress-mini">
+                                            <div style="width:65%" class="progress-bar"></div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix">
+                                            <span class="pull-left">Hardware Upgrade</span>
+                                            <span class="pull-right">35%</span>
+                                        </div>
+
+                                        <div class="progress progress-mini">
+                                            <div style="width:35%" class="progress-bar progress-bar-danger"></div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix">
+                                            <span class="pull-left">Unit Testing</span>
+                                            <span class="pull-right">15%</span>
+                                        </div>
+
+                                        <div class="progress progress-mini">
+                                            <div style="width:15%" class="progress-bar progress-bar-warning"></div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix">
+                                            <span class="pull-left">Bug Fixes</span>
+                                            <span class="pull-right">90%</span>
+                                        </div>
+
+                                        <div class="progress progress-mini progress-striped active">
+                                            <div style="width:90%" class="progress-bar progress-bar-success"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-footer">
+                            <a href="#">
+                                See tasks with details
+                                <i class="ace-icon fa fa-arrow-right"></i>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-                        <i class="icon-diamond"></i>
-                        <span class="title">权限管理</span>
-                        <span class="arrow"></span>
+
+                <li class="purple dropdown-modal">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="ace-icon fa fa-bell icon-animated-bell"></i>
+                        <span class="badge badge-important">8</span>
                     </a>
-                    <ul class="sub-menu">
-                        <li class="nav-item  ">
-                            <a href="/function/list" class="nav-link ">
-                                <span class="title">功能列表</span>
-                            </a>
+
+                    <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header">
+                            <i class="ace-icon fa fa-exclamation-triangle"></i>
+                            8 Notifications
                         </li>
-                        <li class="nav-item  ">
-                            <a href="/role/toAdd" class="nav-link ">
-                                <span class="title">新增角色</span>
-                            </a>
+
+                        <li class="dropdown-content">
+                            <ul class="dropdown-menu dropdown-navbar navbar-pink">
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+														New Comments
+													</span>
+                                            <span class="pull-right badge badge-info">+12</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="btn btn-xs btn-primary fa fa-user"></i>
+                                        Bob just signed up as an editor ...
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
+														New Orders
+													</span>
+                                            <span class="pull-right badge badge-success">+8</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
+														Followers
+													</span>
+                                            <span class="pull-right badge badge-info">+11</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item  ">
-                            <a href="/role/list" class="nav-link ">
-                                <span class="title">角色列表</span>
+
+                        <li class="dropdown-footer">
+                            <a href="#">
+                                See all notifications
+                                <i class="ace-icon fa fa-arrow-right"></i>
                             </a>
                         </li>
                     </ul>
                 </li>
-            </ul>
-            <!-- END SIDEBAR MENU -->
-        </div>
-        <!-- END SIDEBAR -->
-    </div>
-    <!-- END SIDEBAR -->
-    <!-- BEGIN CONTENT -->
-    <div class="page-content-wrapper">
-        <!-- BEGIN CONTENT BODY -->
-        <div class="page-content">
-            <sitemesh:write property='body' />
-            <!-- END PAGE HEADER-->
-        </div>
-        <!-- END CONTENT BODY -->
-    </div>
-    <!-- END CONTENT -->
-    <!-- BEGIN QUICK SIDEBAR -->
-    <a href="javascript:;" class="page-quick-sidebar-toggler">
-        <i class="icon-login"></i>
-    </a>
-    <div class="page-quick-sidebar-wrapper" data-close-on-body-click="false">
-        <div class="page-quick-sidebar">
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a href="javascript:;" data-target="#quick_sidebar_tab_1" data-toggle="tab"> Users
-                        <span class="badge badge-danger">2</span>
+
+                <li class="green dropdown-modal">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
+                        <span class="badge badge-success">5</span>
                     </a>
+
+                    <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header">
+                            <i class="ace-icon fa fa-envelope-o"></i>
+                            5 Messages
+                        </li>
+
+                        <li class="dropdown-content">
+                            <ul class="dropdown-menu dropdown-navbar">
+                                <li>
+                                    <a href="#" class="clearfix">
+                                        <img src="../assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+                                        <span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Alex:</span>
+														Ciao sociis natoque penatibus et auctor ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>a moment ago</span>
+													</span>
+												</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="clearfix">
+                                        <img src="../assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+                                        <span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Susan:</span>
+														Vestibulum id ligula porta felis euismod ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>20 minutes ago</span>
+													</span>
+												</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="clearfix">
+                                        <img src="../assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+                                        <span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Bob:</span>
+														Nullam quis risus eget urna mollis ornare ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>3:15 pm</span>
+													</span>
+												</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="clearfix">
+                                        <img src="../assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
+                                        <span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Kate:</span>
+														Ciao sociis natoque eget urna mollis ornare ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>1:33 pm</span>
+													</span>
+												</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="clearfix">
+                                        <img src="../assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
+                                        <span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Fred:</span>
+														Vestibulum id penatibus et auctor  ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>10:09 am</span>
+													</span>
+												</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-footer">
+                            <a href="inbox.html">
+                                See all messages
+                                <i class="ace-icon fa fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="javascript:;" data-target="#quick_sidebar_tab_2" data-toggle="tab"> Alerts
-                        <span class="badge badge-success">7</span>
+
+                <!-- #section:basics/navbar.user_menu -->
+                <li class="light-blue dropdown-modal">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />
+                        <span class="user-info">
+									<small>Welcome,</small>
+									Jason
+								</span>
+
+                        <i class="ace-icon fa fa-caret-down"></i>
                     </a>
-                </li>
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> More
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown-menu pull-right">
+
+                    <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="javascript:;" data-target="#quick_sidebar_tab_3" data-toggle="tab">
-                                <i class="icon-bell"></i> Alerts </a>
+                            <a href="#">
+                                <i class="ace-icon fa fa-cog"></i>
+                                Settings
+                            </a>
                         </li>
+
                         <li>
-                            <a href="javascript:;" data-target="#quick_sidebar_tab_3" data-toggle="tab">
-                                <i class="icon-info"></i> Notifications </a>
+                            <a href="profile.html">
+                                <i class="ace-icon fa fa-user"></i>
+                                Profile
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:;" data-target="#quick_sidebar_tab_3" data-toggle="tab">
-                                <i class="icon-speech"></i> Activities </a>
-                        </li>
+
                         <li class="divider"></li>
+
                         <li>
-                            <a href="javascript:;" data-target="#quick_sidebar_tab_3" data-toggle="tab">
-                                <i class="icon-settings"></i> Settings </a>
+                            <a href="#">
+                                <i class="ace-icon fa fa-power-off"></i>
+                                Logout
+                            </a>
                         </li>
                     </ul>
                 </li>
+
+                <!-- /section:basics/navbar.user_menu -->
             </ul>
-            <div class="tab-content">
-                <div class="tab-pane active page-quick-sidebar-chat" id="quick_sidebar_tab_1">
-                    <div class="page-quick-sidebar-chat-users" data-rail-color="#ddd" data-wrapper-class="page-quick-sidebar-list">
-                        <h3 class="list-heading">Staff</h3>
-                        <ul class="media-list list-items">
-                            <li class="media">
-                                <div class="media-status">
-                                    <span class="badge badge-success">8</span>
-                                </div>
-                                <img class="media-object" src="../assets/layouts/layout/img/avatar3.jpg" alt="...">
-                                <div class="media-body">
-                                    <h4 class="media-heading">Bob Nilson</h4>
-                                    <div class="media-heading-sub"> Project Manager </div>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <img class="media-object" src="../assets/layouts/layout/img/avatar1.jpg" alt="...">
-                                <div class="media-body">
-                                    <h4 class="media-heading">Nick Larson</h4>
-                                    <div class="media-heading-sub"> Art Director </div>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <div class="media-status">
-                                    <span class="badge badge-danger">3</span>
-                                </div>
-                                <img class="media-object" src="../assets/layouts/layout/img/avatar4.jpg" alt="...">
-                                <div class="media-body">
-                                    <h4 class="media-heading">Deon Hubert</h4>
-                                    <div class="media-heading-sub"> CTO </div>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <img class="media-object" src="../assets/layouts/layout/img/avatar2.jpg" alt="...">
-                                <div class="media-body">
-                                    <h4 class="media-heading">Ella Wong</h4>
-                                    <div class="media-heading-sub"> CEO </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <h3 class="list-heading">Customers</h3>
-                        <ul class="media-list list-items">
-                            <li class="media">
-                                <div class="media-status">
-                                    <span class="badge badge-warning">2</span>
-                                </div>
-                                <img class="media-object" src="../assets/layouts/layout/img/avatar6.jpg" alt="...">
-                                <div class="media-body">
-                                    <h4 class="media-heading">Lara Kunis</h4>
-                                    <div class="media-heading-sub"> CEO, Loop Inc </div>
-                                    <div class="media-heading-small"> Last seen 03:10 AM </div>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <div class="media-status">
-                                    <span class="label label-sm label-success">new</span>
-                                </div>
-                                <img class="media-object" src="../assets/layouts/layout/img/avatar7.jpg" alt="...">
-                                <div class="media-body">
-                                    <h4 class="media-heading">Ernie Kyllonen</h4>
-                                    <div class="media-heading-sub"> Project Manager,
-                                        <br> SmartBizz PTL </div>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <img class="media-object" src="../assets/layouts/layout/img/avatar8.jpg" alt="...">
-                                <div class="media-body">
-                                    <h4 class="media-heading">Lisa Stone</h4>
-                                    <div class="media-heading-sub"> CTO, Keort Inc </div>
-                                    <div class="media-heading-small"> Last seen 13:10 PM </div>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <div class="media-status">
-                                    <span class="badge badge-success">7</span>
-                                </div>
-                                <img class="media-object" src="../assets/layouts/layout/img/avatar9.jpg" alt="...">
-                                <div class="media-body">
-                                    <h4 class="media-heading">Deon Portalatin</h4>
-                                    <div class="media-heading-sub"> CFO, H&D LTD </div>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <img class="media-object" src="../assets/layouts/layout/img/avatar10.jpg" alt="...">
-                                <div class="media-body">
-                                    <h4 class="media-heading">Irina Savikova</h4>
-                                    <div class="media-heading-sub"> CEO, Tizda Motors Inc </div>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <div class="media-status">
-                                    <span class="badge badge-danger">4</span>
-                                </div>
-                                <img class="media-object" src="../assets/layouts/layout/img/avatar11.jpg" alt="...">
-                                <div class="media-body">
-                                    <h4 class="media-heading">Maria Gomez</h4>
-                                    <div class="media-heading-sub"> Manager, Infomatic Inc </div>
-                                    <div class="media-heading-small"> Last seen 03:10 AM </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="page-quick-sidebar-item">
-                        <div class="page-quick-sidebar-chat-user">
-                            <div class="page-quick-sidebar-nav">
-                                <a href="javascript:;" class="page-quick-sidebar-back-to-list">
-                                    <i class="icon-arrow-left"></i>Back</a>
-                            </div>
-                            <div class="page-quick-sidebar-chat-user-messages">
-                                <div class="post out">
-                                    <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar3.jpg" />
-                                    <div class="message">
-                                        <span class="arrow"></span>
-                                        <a href="javascript:;" class="name">Bob Nilson</a>
-                                        <span class="datetime">20:15</span>
-                                        <span class="body"> When could you send me the report ? </span>
-                                    </div>
-                                </div>
-                                <div class="post in">
-                                    <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar2.jpg" />
-                                    <div class="message">
-                                        <span class="arrow"></span>
-                                        <a href="javascript:;" class="name">Ella Wong</a>
-                                        <span class="datetime">20:15</span>
-                                        <span class="body"> Its almost done. I will be sending it shortly </span>
-                                    </div>
-                                </div>
-                                <div class="post out">
-                                    <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar3.jpg" />
-                                    <div class="message">
-                                        <span class="arrow"></span>
-                                        <a href="javascript:;" class="name">Bob Nilson</a>
-                                        <span class="datetime">20:15</span>
-                                        <span class="body"> Alright. Thanks! :) </span>
-                                    </div>
-                                </div>
-                                <div class="post in">
-                                    <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar2.jpg" />
-                                    <div class="message">
-                                        <span class="arrow"></span>
-                                        <a href="javascript:;" class="name">Ella Wong</a>
-                                        <span class="datetime">20:16</span>
-                                        <span class="body"> You are most welcome. Sorry for the delay. </span>
-                                    </div>
-                                </div>
-                                <div class="post out">
-                                    <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar3.jpg" />
-                                    <div class="message">
-                                        <span class="arrow"></span>
-                                        <a href="javascript:;" class="name">Bob Nilson</a>
-                                        <span class="datetime">20:17</span>
-                                        <span class="body"> No probs. Just take your time :) </span>
-                                    </div>
-                                </div>
-                                <div class="post in">
-                                    <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar2.jpg" />
-                                    <div class="message">
-                                        <span class="arrow"></span>
-                                        <a href="javascript:;" class="name">Ella Wong</a>
-                                        <span class="datetime">20:40</span>
-                                        <span class="body"> Alright. I just emailed it to you. </span>
-                                    </div>
-                                </div>
-                                <div class="post out">
-                                    <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar3.jpg" />
-                                    <div class="message">
-                                        <span class="arrow"></span>
-                                        <a href="javascript:;" class="name">Bob Nilson</a>
-                                        <span class="datetime">20:17</span>
-                                        <span class="body"> Great! Thanks. Will check it right away. </span>
-                                    </div>
-                                </div>
-                                <div class="post in">
-                                    <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar2.jpg" />
-                                    <div class="message">
-                                        <span class="arrow"></span>
-                                        <a href="javascript:;" class="name">Ella Wong</a>
-                                        <span class="datetime">20:40</span>
-                                        <span class="body"> Please let me know if you have any comment. </span>
-                                    </div>
-                                </div>
-                                <div class="post out">
-                                    <img class="avatar" alt="" src="../assets/layouts/layout/img/avatar3.jpg" />
-                                    <div class="message">
-                                        <span class="arrow"></span>
-                                        <a href="javascript:;" class="name">Bob Nilson</a>
-                                        <span class="datetime">20:17</span>
-                                        <span class="body"> Sure. I will check and buzz you if anything needs to be corrected. </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="page-quick-sidebar-chat-user-form">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Type a message here...">
-                                    <div class="input-group-btn">
-                                        <button type="button" class="btn green">
-                                            <i class="icon-paper-clip"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane page-quick-sidebar-alerts" id="quick_sidebar_tab_2">
-                    <div class="page-quick-sidebar-alerts-list">
-                        <h3 class="list-heading">General</h3>
-                        <ul class="feeds list-items">
-                            <li>
-                                <div class="col1">
-                                    <div class="cont">
-                                        <div class="cont-col1">
-                                            <div class="label label-sm label-info">
-                                                <i class="fa fa-check"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cont-col2">
-                                            <div class="desc"> You have 4 pending tasks.
-                                                <span class="label label-sm label-warning "> Take action
-                                                            <i class="fa fa-share"></i>
-                                                        </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col2">
-                                    <div class="date"> Just now </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <div class="col1">
-                                        <div class="cont">
-                                            <div class="cont-col1">
-                                                <div class="label label-sm label-success">
-                                                    <i class="fa fa-bar-chart-o"></i>
-                                                </div>
-                                            </div>
-                                            <div class="cont-col2">
-                                                <div class="desc"> Finance Report for year 2013 has been released. </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col2">
-                                        <div class="date"> 20 mins </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="col1">
-                                    <div class="cont">
-                                        <div class="cont-col1">
-                                            <div class="label label-sm label-danger">
-                                                <i class="fa fa-user"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cont-col2">
-                                            <div class="desc"> You have 5 pending membership that requires a quick review. </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col2">
-                                    <div class="date"> 24 mins </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="col1">
-                                    <div class="cont">
-                                        <div class="cont-col1">
-                                            <div class="label label-sm label-info">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cont-col2">
-                                            <div class="desc"> New order received with
-                                                <span class="label label-sm label-success"> Reference Number: DR23923 </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col2">
-                                    <div class="date"> 30 mins </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="col1">
-                                    <div class="cont">
-                                        <div class="cont-col1">
-                                            <div class="label label-sm label-success">
-                                                <i class="fa fa-user"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cont-col2">
-                                            <div class="desc"> You have 5 pending membership that requires a quick review. </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col2">
-                                    <div class="date"> 24 mins </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="col1">
-                                    <div class="cont">
-                                        <div class="cont-col1">
-                                            <div class="label label-sm label-info">
-                                                <i class="fa fa-bell-o"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cont-col2">
-                                            <div class="desc"> Web server hardware needs to be upgraded.
-                                                <span class="label label-sm label-warning"> Overdue </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col2">
-                                    <div class="date"> 2 hours </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <div class="col1">
-                                        <div class="cont">
-                                            <div class="cont-col1">
-                                                <div class="label label-sm label-default">
-                                                    <i class="fa fa-briefcase"></i>
-                                                </div>
-                                            </div>
-                                            <div class="cont-col2">
-                                                <div class="desc"> IPO Report for year 2013 has been released. </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col2">
-                                        <div class="date"> 20 mins </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <h3 class="list-heading">System</h3>
-                        <ul class="feeds list-items">
-                            <li>
-                                <div class="col1">
-                                    <div class="cont">
-                                        <div class="cont-col1">
-                                            <div class="label label-sm label-info">
-                                                <i class="fa fa-check"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cont-col2">
-                                            <div class="desc"> You have 4 pending tasks.
-                                                <span class="label label-sm label-warning "> Take action
-                                                            <i class="fa fa-share"></i>
-                                                        </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col2">
-                                    <div class="date"> Just now </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <div class="col1">
-                                        <div class="cont">
-                                            <div class="cont-col1">
-                                                <div class="label label-sm label-danger">
-                                                    <i class="fa fa-bar-chart-o"></i>
-                                                </div>
-                                            </div>
-                                            <div class="cont-col2">
-                                                <div class="desc"> Finance Report for year 2013 has been released. </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col2">
-                                        <div class="date"> 20 mins </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="col1">
-                                    <div class="cont">
-                                        <div class="cont-col1">
-                                            <div class="label label-sm label-default">
-                                                <i class="fa fa-user"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cont-col2">
-                                            <div class="desc"> You have 5 pending membership that requires a quick review. </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col2">
-                                    <div class="date"> 24 mins </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="col1">
-                                    <div class="cont">
-                                        <div class="cont-col1">
-                                            <div class="label label-sm label-info">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cont-col2">
-                                            <div class="desc"> New order received with
-                                                <span class="label label-sm label-success"> Reference Number: DR23923 </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col2">
-                                    <div class="date"> 30 mins </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="col1">
-                                    <div class="cont">
-                                        <div class="cont-col1">
-                                            <div class="label label-sm label-success">
-                                                <i class="fa fa-user"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cont-col2">
-                                            <div class="desc"> You have 5 pending membership that requires a quick review. </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col2">
-                                    <div class="date"> 24 mins </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="col1">
-                                    <div class="cont">
-                                        <div class="cont-col1">
-                                            <div class="label label-sm label-warning">
-                                                <i class="fa fa-bell-o"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cont-col2">
-                                            <div class="desc"> Web server hardware needs to be upgraded.
-                                                <span class="label label-sm label-default "> Overdue </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col2">
-                                    <div class="date"> 2 hours </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <div class="col1">
-                                        <div class="cont">
-                                            <div class="cont-col1">
-                                                <div class="label label-sm label-info">
-                                                    <i class="fa fa-briefcase"></i>
-                                                </div>
-                                            </div>
-                                            <div class="cont-col2">
-                                                <div class="desc"> IPO Report for year 2013 has been released. </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col2">
-                                        <div class="date"> 20 mins </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="tab-pane page-quick-sidebar-settings" id="quick_sidebar_tab_3">
-                    <div class="page-quick-sidebar-settings-list">
-                        <h3 class="list-heading">General Settings</h3>
-                        <ul class="list-items borderless">
-                            <li> Enable Notifications
-                                <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="success" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
-                            <li> Allow Tracking
-                                <input type="checkbox" class="make-switch" data-size="small" data-on-color="info" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
-                            <li> Log Errors
-                                <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="danger" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
-                            <li> Auto Sumbit Issues
-                                <input type="checkbox" class="make-switch" data-size="small" data-on-color="warning" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
-                            <li> Enable SMS Alerts
-                                <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="success" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
-                        </ul>
-                        <h3 class="list-heading">System Settings</h3>
-                        <ul class="list-items borderless">
-                            <li> Security Level
-                                <select class="form-control input-inline input-sm input-small">
-                                    <option value="1">Normal</option>
-                                    <option value="2" selected>Medium</option>
-                                    <option value="e">High</option>
-                                </select>
-                            </li>
-                            <li> Failed Email Attempts
-                                <input class="form-control input-inline input-sm input-small" value="5" /> </li>
-                            <li> Secondary SMTP Port
-                                <input class="form-control input-inline input-sm input-small" value="3560" /> </li>
-                            <li> Notify On System Error
-                                <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="danger" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
-                            <li> Notify On SMTP Error
-                                <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="warning" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
-                        </ul>
-                        <div class="inner-content">
-                            <button class="btn btn-success">
-                                <i class="icon-settings"></i> Save Changes</button>
-                        </div>
-                    </div>
-                </div>
+        </div>
+
+        <!-- /section:basics/navbar.dropdown -->
+    </div><!-- /.navbar-container -->
+</div>
+
+<!-- /section:basics/navbar.layout -->
+<div class="main-container ace-save-state" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.loadState('main-container')}catch(e){}
+    </script>
+
+    <!-- #section:basics/sidebar -->
+    <div id="sidebar" class="sidebar                  responsive                    ace-save-state">
+        <script type="text/javascript">
+            try{ace.settings.loadState('sidebar')}catch(e){}
+        </script>
+
+        <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+            <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+                <button class="btn btn-success">
+                    <i class="ace-icon fa fa-signal"></i>
+                </button>
+
+                <button class="btn btn-info">
+                    <i class="ace-icon fa fa-pencil"></i>
+                </button>
+
+                <!-- #section:basics/sidebar.layout.shortcuts -->
+                <button class="btn btn-warning">
+                    <i class="ace-icon fa fa-users"></i>
+                </button>
+
+                <button class="btn btn-danger">
+                    <i class="ace-icon fa fa-cogs"></i>
+                </button>
+
+                <!-- /section:basics/sidebar.layout.shortcuts -->
             </div>
+
+            <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                <span class="btn btn-success"></span>
+
+                <span class="btn btn-info"></span>
+
+                <span class="btn btn-warning"></span>
+
+                <span class="btn btn-danger"></span>
+            </div>
+        </div><!-- /.sidebar-shortcuts -->
+
+        <ul class="nav nav-list">
+            <li class="active">
+                <a href="index.html">
+                    <i class="menu-icon fa fa-tachometer"></i>
+                    <span class="menu-text"> Dashboard </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-desktop"></i>
+                    <span class="menu-text">
+								UI &amp; Elements
+							</span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-caret-right"></i>
+
+                            Layouts
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="top-menu.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Top Menu
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="two-menu-1.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Two Menus 1
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="two-menu-2.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Two Menus 2
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="mobile-menu-1.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Default Mobile Menu
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="mobile-menu-2.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Mobile Menu 2
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="mobile-menu-3.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Mobile Menu 3
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="typography.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Typography
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="elements.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Elements
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="buttons.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Buttons &amp; Icons
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="content-slider.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Content Sliders
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="treeview.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Treeview
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="jquery-ui.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            jQuery UI
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="nestable-list.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Nestable Lists
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-caret-right"></i>
+
+                            Three Level Menu
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="#">
+                                    <i class="menu-icon fa fa-leaf green"></i>
+                                    Item #1
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-pencil orange"></i>
+
+                                    4th level
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+
+                                <b class="arrow"></b>
+
+                                <ul class="submenu">
+                                    <li class="">
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-plus purple"></i>
+                                            Add Product
+                                        </a>
+
+                                        <b class="arrow"></b>
+                                    </li>
+
+                                    <li class="">
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-eye pink"></i>
+                                            View Products
+                                        </a>
+
+                                        <b class="arrow"></b>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-list"></i>
+                    <span class="menu-text"> Tables </span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="tables.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Simple &amp; Dynamic
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="jqgrid.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            jqGrid plugin
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-pencil-square-o"></i>
+                    <span class="menu-text"> Forms </span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="form-elements.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Form Elements
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="form-elements-2.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Form Elements 2
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="form-wizard.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Wizard &amp; Validation
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="wysiwyg.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Wysiwyg &amp; Markdown
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="dropzone.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Dropzone File Upload
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href="widgets.html">
+                    <i class="menu-icon fa fa-list-alt"></i>
+                    <span class="menu-text"> Widgets </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+
+            <li class="">
+                <a href="calendar.html">
+                    <i class="menu-icon fa fa-calendar"></i>
+
+                    <span class="menu-text">
+								Calendar
+
+                        <!-- #section:basics/sidebar.layout.badge -->
+								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
+									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
+								</span>
+
+                        <!-- /section:basics/sidebar.layout.badge -->
+							</span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+
+            <li class="">
+                <a href="gallery.html">
+                    <i class="menu-icon fa fa-picture-o"></i>
+                    <span class="menu-text"> Gallery </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-tag"></i>
+                    <span class="menu-text"> More Pages </span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="profile.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            User Profile
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="inbox.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Inbox
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="pricing.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Pricing Tables
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="invoice.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Invoice
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="timeline.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Timeline
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="search.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Search Results
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="email.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Email Templates
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="login.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Login &amp; Register
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-file-o"></i>
+
+                    <span class="menu-text">
+								Other Pages
+
+                        <!-- #section:basics/sidebar.layout.badge -->
+								<span class="badge badge-primary">5</span>
+
+                        <!-- /section:basics/sidebar.layout.badge -->
+							</span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="faq.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            FAQ
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="error-404.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Error 404
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="error-500.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Error 500
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="grid.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Grid
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="blank.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Blank Page
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+        </ul><!-- /.nav-list -->
+
+        <!-- #section:basics/sidebar.layout.minimize -->
+        <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+            <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+        </div>
+
+        <!-- /section:basics/sidebar.layout.minimize -->
+    </div>
+
+    <!-- /section:basics/sidebar -->
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="ace-icon fa fa-home home-icon"></i>
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="active">Dashboard</li>
+                </ul><!-- /.breadcrumb -->
+
+                <!-- #section:basics/content.searchbox -->
+                <div class="nav-search" id="nav-search">
+                    <form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="ace-icon fa fa-search nav-search-icon"></i>
+								</span>
+                    </form>
+                </div><!-- /.nav-search -->
+
+                <!-- /section:basics/content.searchbox -->
+            </div>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <!-- #section:settings.box -->
+                <div class="ace-settings-container" id="ace-settings-container">
+                    <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+                        <i class="ace-icon fa fa-cog bigger-130"></i>
+                    </div>
+
+                    <div class="ace-settings-box clearfix" id="ace-settings-box">
+                        <div class="pull-left width-50">
+                            <!-- #section:settings.skins -->
+                            <div class="ace-settings-item">
+                                <div class="pull-left">
+                                    <select id="skin-colorpicker" class="hide">
+                                        <option data-skin="no-skin" value="#438EB9">#438EB9</option>
+                                        <option data-skin="skin-1" value="#222A2D">#222A2D</option>
+                                        <option data-skin="skin-2" value="#C6487E">#C6487E</option>
+                                        <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+                                    </select>
+                                </div>
+                                <span>&nbsp; Choose Skin</span>
+                            </div>
+
+                            <!-- /section:settings.skins -->
+
+                            <!-- #section:settings.navbar -->
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-navbar" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+                            </div>
+
+                            <!-- /section:settings.navbar -->
+
+                            <!-- #section:settings.sidebar -->
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-sidebar" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+                            </div>
+
+                            <!-- /section:settings.sidebar -->
+
+                            <!-- #section:settings.breadcrumbs -->
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-breadcrumbs" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+                            </div>
+
+                            <!-- /section:settings.breadcrumbs -->
+
+                            <!-- #section:settings.rtl -->
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+                            </div>
+
+                            <!-- /section:settings.rtl -->
+
+                            <!-- #section:settings.container -->
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-add-container" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-add-container">
+                                    Inside
+                                    <b>.container</b>
+                                </label>
+                            </div>
+
+                            <!-- /section:settings.container -->
+                        </div><!-- /.pull-left -->
+
+                        <div class="pull-left width-50">
+                            <!-- #section:basics/sidebar.options -->
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-hover"> Submenu on Hover</label>
+                            </div>
+
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-compact"> Compact Sidebar</label>
+                            </div>
+
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-highlight"> Alt. Active Item</label>
+                            </div>
+
+                            <!-- /section:basics/sidebar.options -->
+                        </div><!-- /.pull-left -->
+                    </div><!-- /.ace-settings-box -->
+                </div><!-- /.ace-settings-container -->
+
+                <!-- /section:settings.box -->
+                <div class="page-header">
+                    <h1>
+                        Dashboard
+                        <small>
+                            <i class="ace-icon fa fa-angle-double-right"></i>
+                            overview &amp; stats
+                        </small>
+                    </h1>
+                </div><!-- /.page-header -->
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <div class="alert alert-block alert-success">
+                            <button type="button" class="close" data-dismiss="alert">
+                                <i class="ace-icon fa fa-times"></i>
+                            </button>
+
+                            <i class="ace-icon fa fa-check green"></i>
+
+                            Welcome to
+                            <strong class="green">
+                                Ace
+                                <small>(v1.4)</small>
+                            </strong>,
+                            the lightweight, feature-rich and easy to use admin template.
+                        </div>
+
+                        <div class="row">
+                            <div class="space-6"></div>
+
+                            <div class="col-sm-7 infobox-container">
+                                <!-- #section:pages/dashboard.infobox -->
+                                <div class="infobox infobox-green">
+                                    <div class="infobox-icon">
+                                        <i class="ace-icon fa fa-comments"></i>
+                                    </div>
+
+                                    <div class="infobox-data">
+                                        <span class="infobox-data-number">32</span>
+                                        <div class="infobox-content">comments + 2 reviews</div>
+                                    </div>
+
+                                    <!-- #section:pages/dashboard.infobox.stat -->
+                                    <div class="stat stat-success">8%</div>
+
+                                    <!-- /section:pages/dashboard.infobox.stat -->
+                                </div>
+
+                                <div class="infobox infobox-blue">
+                                    <div class="infobox-icon">
+                                        <i class="ace-icon fa fa-twitter"></i>
+                                    </div>
+
+                                    <div class="infobox-data">
+                                        <span class="infobox-data-number">11</span>
+                                        <div class="infobox-content">new followers</div>
+                                    </div>
+
+                                    <div class="badge badge-success">
+                                        +32%
+                                        <i class="ace-icon fa fa-arrow-up"></i>
+                                    </div>
+                                </div>
+
+                                <div class="infobox infobox-pink">
+                                    <div class="infobox-icon">
+                                        <i class="ace-icon fa fa-shopping-cart"></i>
+                                    </div>
+
+                                    <div class="infobox-data">
+                                        <span class="infobox-data-number">8</span>
+                                        <div class="infobox-content">new orders</div>
+                                    </div>
+                                    <div class="stat stat-important">4%</div>
+                                </div>
+
+                                <div class="infobox infobox-red">
+                                    <div class="infobox-icon">
+                                        <i class="ace-icon fa fa-flask"></i>
+                                    </div>
+
+                                    <div class="infobox-data">
+                                        <span class="infobox-data-number">7</span>
+                                        <div class="infobox-content">experiments</div>
+                                    </div>
+                                </div>
+
+                                <div class="infobox infobox-orange2">
+                                    <!-- #section:pages/dashboard.infobox.sparkline -->
+                                    <div class="infobox-chart">
+                                        <span class="sparkline" data-values="196,128,202,177,154,94,100,170,224"></span>
+                                    </div>
+
+                                    <!-- /section:pages/dashboard.infobox.sparkline -->
+                                    <div class="infobox-data">
+                                        <span class="infobox-data-number">6,251</span>
+                                        <div class="infobox-content">pageviews</div>
+                                    </div>
+
+                                    <div class="badge badge-success">
+                                        7.2%
+                                        <i class="ace-icon fa fa-arrow-up"></i>
+                                    </div>
+                                </div>
+
+                                <div class="infobox infobox-blue2">
+                                    <div class="infobox-progress">
+                                        <!-- #section:pages/dashboard.infobox.easypiechart -->
+                                        <div class="easy-pie-chart percentage" data-percent="42" data-size="46">
+                                            <span class="percent">42</span>%
+                                        </div>
+
+                                        <!-- /section:pages/dashboard.infobox.easypiechart -->
+                                    </div>
+
+                                    <div class="infobox-data">
+                                        <span class="infobox-text">traffic used</span>
+
+                                        <div class="infobox-content">
+                                            <span class="bigger-110">~</span>
+                                            58GB remaining
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- /section:pages/dashboard.infobox -->
+                                <div class="space-6"></div>
+
+                                <!-- #section:pages/dashboard.infobox.dark -->
+                                <div class="infobox infobox-green infobox-small infobox-dark">
+                                    <div class="infobox-progress">
+                                        <!-- #section:pages/dashboard.infobox.easypiechart -->
+                                        <div class="easy-pie-chart percentage" data-percent="61" data-size="39">
+                                            <span class="percent">61</span>%
+                                        </div>
+
+                                        <!-- /section:pages/dashboard.infobox.easypiechart -->
+                                    </div>
+
+                                    <div class="infobox-data">
+                                        <div class="infobox-content">Task</div>
+                                        <div class="infobox-content">Completion</div>
+                                    </div>
+                                </div>
+
+                                <div class="infobox infobox-blue infobox-small infobox-dark">
+                                    <!-- #section:pages/dashboard.infobox.sparkline -->
+                                    <div class="infobox-chart">
+                                        <span class="sparkline" data-values="3,4,2,3,4,4,2,2"></span>
+                                    </div>
+
+                                    <!-- /section:pages/dashboard.infobox.sparkline -->
+                                    <div class="infobox-data">
+                                        <div class="infobox-content">Earnings</div>
+                                        <div class="infobox-content">$32,000</div>
+                                    </div>
+                                </div>
+
+                                <div class="infobox infobox-grey infobox-small infobox-dark">
+                                    <div class="infobox-icon">
+                                        <i class="ace-icon fa fa-download"></i>
+                                    </div>
+
+                                    <div class="infobox-data">
+                                        <div class="infobox-content">Downloads</div>
+                                        <div class="infobox-content">1,205</div>
+                                    </div>
+                                </div>
+
+                                <!-- /section:pages/dashboard.infobox.dark -->
+                            </div>
+
+                            <div class="vspace-12-sm"></div>
+
+                            <div class="col-sm-5">
+                                <div class="widget-box">
+                                    <div class="widget-header widget-header-flat widget-header-small">
+                                        <h5 class="widget-title">
+                                            <i class="ace-icon fa fa-signal"></i>
+                                            Traffic Sources
+                                        </h5>
+
+                                        <div class="widget-toolbar no-border">
+                                            <div class="inline dropdown-hover">
+                                                <button class="btn btn-minier btn-primary">
+                                                    This Week
+                                                    <i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
+                                                </button>
+
+                                                <ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
+                                                    <li class="active">
+                                                        <a href="#" class="blue">
+                                                            <i class="ace-icon fa fa-caret-right bigger-110">&nbsp;</i>
+                                                            This Week
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+                                                            Last Week
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+                                                            This Month
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+                                                            Last Month
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <!-- #section:plugins/charts.flotchart -->
+                                            <div id="piechart-placeholder"></div>
+
+                                            <!-- /section:plugins/charts.flotchart -->
+                                            <div class="hr hr8 hr-double"></div>
+
+                                            <div class="clearfix">
+                                                <!-- #section:custom/extra.grid -->
+                                                <div class="grid3">
+															<span class="grey">
+																<i class="ace-icon fa fa-facebook-square fa-2x blue"></i>
+																&nbsp; likes
+															</span>
+                                                    <h4 class="bigger pull-right">1,255</h4>
+                                                </div>
+
+                                                <div class="grid3">
+															<span class="grey">
+																<i class="ace-icon fa fa-twitter-square fa-2x purple"></i>
+																&nbsp; tweets
+															</span>
+                                                    <h4 class="bigger pull-right">941</h4>
+                                                </div>
+
+                                                <div class="grid3">
+															<span class="grey">
+																<i class="ace-icon fa fa-pinterest-square fa-2x red"></i>
+																&nbsp; pins
+															</span>
+                                                    <h4 class="bigger pull-right">1,050</h4>
+                                                </div>
+
+                                                <!-- /section:custom/extra.grid -->
+                                            </div>
+                                        </div><!-- /.widget-main -->
+                                    </div><!-- /.widget-body -->
+                                </div><!-- /.widget-box -->
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+
+                        <!-- #section:custom/extra.hr -->
+                        <div class="hr hr32 hr-dotted"></div>
+
+                        <!-- /section:custom/extra.hr -->
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="widget-box transparent">
+                                    <div class="widget-header widget-header-flat">
+                                        <h4 class="widget-title lighter">
+                                            <i class="ace-icon fa fa-star orange"></i>
+                                            Popular Domains
+                                        </h4>
+
+                                        <div class="widget-toolbar">
+                                            <a href="#" data-action="collapse">
+                                                <i class="ace-icon fa fa-chevron-up"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main no-padding">
+                                            <table class="table table-bordered table-striped">
+                                                <thead class="thin-border-bottom">
+                                                <tr>
+                                                    <th>
+                                                        <i class="ace-icon fa fa-caret-right blue"></i>name
+                                                    </th>
+
+                                                    <th>
+                                                        <i class="ace-icon fa fa-caret-right blue"></i>price
+                                                    </th>
+
+                                                    <th class="hidden-480">
+                                                        <i class="ace-icon fa fa-caret-right blue"></i>status
+                                                    </th>
+                                                </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                <tr>
+                                                    <td>internet.com</td>
+
+                                                    <td>
+                                                        <small>
+                                                            <s class="red">$29.99</s>
+                                                        </small>
+                                                        <b class="green">$19.99</b>
+                                                    </td>
+
+                                                    <td class="hidden-480">
+                                                        <span class="label label-info arrowed-right arrowed-in">on sale</span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>online.com</td>
+
+                                                    <td>
+                                                        <b class="blue">$16.45</b>
+                                                    </td>
+
+                                                    <td class="hidden-480">
+                                                        <span class="label label-success arrowed-in arrowed-in-right">approved</span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>newnet.com</td>
+
+                                                    <td>
+                                                        <b class="blue">$15.00</b>
+                                                    </td>
+
+                                                    <td class="hidden-480">
+                                                        <span class="label label-danger arrowed">pending</span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>web.com</td>
+
+                                                    <td>
+                                                        <small>
+                                                            <s class="red">$24.99</s>
+                                                        </small>
+                                                        <b class="green">$19.95</b>
+                                                    </td>
+
+                                                    <td class="hidden-480">
+																	<span class="label arrowed">
+																		<s>out of stock</s>
+																	</span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>domain.com</td>
+
+                                                    <td>
+                                                        <b class="blue">$12.00</b>
+                                                    </td>
+
+                                                    <td class="hidden-480">
+                                                        <span class="label label-warning arrowed arrowed-right">SOLD</span>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div><!-- /.widget-main -->
+                                    </div><!-- /.widget-body -->
+                                </div><!-- /.widget-box -->
+                            </div><!-- /.col -->
+
+                            <div class="col-sm-7">
+                                <div class="widget-box transparent">
+                                    <div class="widget-header widget-header-flat">
+                                        <h4 class="widget-title lighter">
+                                            <i class="ace-icon fa fa-signal"></i>
+                                            Sale Stats
+                                        </h4>
+
+                                        <div class="widget-toolbar">
+                                            <a href="#" data-action="collapse">
+                                                <i class="ace-icon fa fa-chevron-up"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main padding-4">
+                                            <div id="sales-charts"></div>
+                                        </div><!-- /.widget-main -->
+                                    </div><!-- /.widget-body -->
+                                </div><!-- /.widget-box -->
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+
+                        <div class="hr hr32 hr-dotted"></div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="widget-box transparent" id="recent-box">
+                                    <div class="widget-header">
+                                        <h4 class="widget-title lighter smaller">
+                                            <i class="ace-icon fa fa-rss orange"></i>RECENT
+                                        </h4>
+
+                                        <div class="widget-toolbar no-border">
+                                            <ul class="nav nav-tabs" id="recent-tab">
+                                                <li class="active">
+                                                    <a data-toggle="tab" href="#task-tab">Tasks</a>
+                                                </li>
+
+                                                <li>
+                                                    <a data-toggle="tab" href="#member-tab">Members</a>
+                                                </li>
+
+                                                <li>
+                                                    <a data-toggle="tab" href="#comment-tab">Comments</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main padding-4">
+                                            <div class="tab-content padding-8">
+                                                <div id="task-tab" class="tab-pane active">
+                                                    <h4 class="smaller lighter green">
+                                                        <i class="ace-icon fa fa-list"></i>
+                                                        Sortable Lists
+                                                    </h4>
+
+                                                    <!-- #section:pages/dashboard.tasks -->
+                                                    <ul id="tasks" class="item-list">
+                                                        <li class="item-orange clearfix">
+                                                            <label class="inline">
+                                                                <input type="checkbox" class="ace" />
+                                                                <span class="lbl"> Answering customer questions</span>
+                                                            </label>
+
+                                                            <div class="pull-right easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="42">
+                                                                <span class="percent">42</span>%
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="item-red clearfix">
+                                                            <label class="inline">
+                                                                <input type="checkbox" class="ace" />
+                                                                <span class="lbl"> Fixing bugs</span>
+                                                            </label>
+
+                                                            <!-- #section:custom/extra.action-buttons -->
+                                                            <div class="pull-right action-buttons">
+                                                                <a href="#" class="blue">
+                                                                    <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                                </a>
+
+                                                                <span class="vbar"></span>
+
+                                                                <a href="#" class="red">
+                                                                    <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                                </a>
+
+                                                                <span class="vbar"></span>
+
+                                                                <a href="#" class="green">
+                                                                    <i class="ace-icon fa fa-flag bigger-130"></i>
+                                                                </a>
+                                                            </div>
+
+                                                            <!-- /section:custom/extra.action-buttons -->
+                                                        </li>
+
+                                                        <li class="item-default clearfix">
+                                                            <label class="inline">
+                                                                <input type="checkbox" class="ace" />
+                                                                <span class="lbl"> Adding new features</span>
+                                                            </label>
+
+                                                            <!-- #section:elements.dropdown.hover -->
+                                                            <div class="pull-right pos-rel dropdown-hover">
+                                                                <button class="btn btn-minier bigger btn-primary">
+                                                                    <i class="ace-icon fa fa-cog icon-only bigger-120"></i>
+                                                                </button>
+
+                                                                <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-caret dropdown-close dropdown-menu-right">
+                                                                    <li>
+                                                                        <a href="#" class="tooltip-success" data-rel="tooltip" title="Mark&nbsp;as&nbsp;done">
+																					<span class="green">
+																						<i class="ace-icon fa fa-check bigger-110"></i>
+																					</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																					<span class="red">
+																						<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																					</span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <!-- /section:elements.dropdown.hover -->
+                                                        </li>
+
+                                                        <li class="item-blue clearfix">
+                                                            <label class="inline">
+                                                                <input type="checkbox" class="ace" />
+                                                                <span class="lbl"> Upgrading scripts used in template</span>
+                                                            </label>
+                                                        </li>
+
+                                                        <li class="item-grey clearfix">
+                                                            <label class="inline">
+                                                                <input type="checkbox" class="ace" />
+                                                                <span class="lbl"> Adding new skins</span>
+                                                            </label>
+                                                        </li>
+
+                                                        <li class="item-green clearfix">
+                                                            <label class="inline">
+                                                                <input type="checkbox" class="ace" />
+                                                                <span class="lbl"> Updating server software up</span>
+                                                            </label>
+                                                        </li>
+
+                                                        <li class="item-pink clearfix">
+                                                            <label class="inline">
+                                                                <input type="checkbox" class="ace" />
+                                                                <span class="lbl"> Cleaning up</span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+
+                                                    <!-- /section:pages/dashboard.tasks -->
+                                                </div>
+
+                                                <div id="member-tab" class="tab-pane">
+                                                    <!-- #section:pages/dashboard.members -->
+                                                    <div class="clearfix">
+                                                        <div class="itemdiv memberdiv">
+                                                            <div class="user">
+                                                                <img alt="Bob Doe's avatar" src="../assets/avatars/user.jpg" />
+                                                            </div>
+
+                                                            <div class="body">
+                                                                <div class="name">
+                                                                    <a href="#">Bob Doe</a>
+                                                                </div>
+
+                                                                <div class="time">
+                                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                                    <span class="green">20 min</span>
+                                                                </div>
+
+                                                                <div>
+                                                                    <span class="label label-warning label-sm">pending</span>
+
+                                                                    <div class="inline position-relative">
+                                                                        <button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                                            <i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+                                                                        </button>
+
+                                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                                            <li>
+                                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																							<span class="green">
+																								<i class="ace-icon fa fa-check bigger-110"></i>
+																							</span>
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																							<span class="orange">
+																								<i class="ace-icon fa fa-times bigger-110"></i>
+																							</span>
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																							<span class="red">
+																								<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																							</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="itemdiv memberdiv">
+                                                            <div class="user">
+                                                                <img alt="Joe Doe's avatar" src="../assets/avatars/avatar2.png" />
+                                                            </div>
+
+                                                            <div class="body">
+                                                                <div class="name">
+                                                                    <a href="#">Joe Doe</a>
+                                                                </div>
+
+                                                                <div class="time">
+                                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                                    <span class="green">1 hour</span>
+                                                                </div>
+
+                                                                <div>
+                                                                    <span class="label label-warning label-sm">pending</span>
+
+                                                                    <div class="inline position-relative">
+                                                                        <button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                                            <i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+                                                                        </button>
+
+                                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                                            <li>
+                                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																							<span class="green">
+																								<i class="ace-icon fa fa-check bigger-110"></i>
+																							</span>
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																							<span class="orange">
+																								<i class="ace-icon fa fa-times bigger-110"></i>
+																							</span>
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																							<span class="red">
+																								<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																							</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="itemdiv memberdiv">
+                                                            <div class="user">
+                                                                <img alt="Jim Doe's avatar" src="../assets/avatars/avatar.png" />
+                                                            </div>
+
+                                                            <div class="body">
+                                                                <div class="name">
+                                                                    <a href="#">Jim Doe</a>
+                                                                </div>
+
+                                                                <div class="time">
+                                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                                    <span class="green">2 hour</span>
+                                                                </div>
+
+                                                                <div>
+                                                                    <span class="label label-warning label-sm">pending</span>
+
+                                                                    <div class="inline position-relative">
+                                                                        <button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                                            <i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+                                                                        </button>
+
+                                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                                            <li>
+                                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																							<span class="green">
+																								<i class="ace-icon fa fa-check bigger-110"></i>
+																							</span>
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																							<span class="orange">
+																								<i class="ace-icon fa fa-times bigger-110"></i>
+																							</span>
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																							<span class="red">
+																								<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																							</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="itemdiv memberdiv">
+                                                            <div class="user">
+                                                                <img alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
+                                                            </div>
+
+                                                            <div class="body">
+                                                                <div class="name">
+                                                                    <a href="#">Alex Doe</a>
+                                                                </div>
+
+                                                                <div class="time">
+                                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                                    <span class="green">3 hour</span>
+                                                                </div>
+
+                                                                <div>
+                                                                    <span class="label label-danger label-sm">blocked</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="itemdiv memberdiv">
+                                                            <div class="user">
+                                                                <img alt="Bob Doe's avatar" src="../assets/avatars/avatar2.png" />
+                                                            </div>
+
+                                                            <div class="body">
+                                                                <div class="name">
+                                                                    <a href="#">Bob Doe</a>
+                                                                </div>
+
+                                                                <div class="time">
+                                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                                    <span class="green">6 hour</span>
+                                                                </div>
+
+                                                                <div>
+                                                                    <span class="label label-success label-sm arrowed-in">approved</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="itemdiv memberdiv">
+                                                            <div class="user">
+                                                                <img alt="Susan's avatar" src="../assets/avatars/avatar3.png" />
+                                                            </div>
+
+                                                            <div class="body">
+                                                                <div class="name">
+                                                                    <a href="#">Susan</a>
+                                                                </div>
+
+                                                                <div class="time">
+                                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                                    <span class="green">yesterday</span>
+                                                                </div>
+
+                                                                <div>
+                                                                    <span class="label label-success label-sm arrowed-in">approved</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="itemdiv memberdiv">
+                                                            <div class="user">
+                                                                <img alt="Phil Doe's avatar" src="../assets/avatars/avatar4.png" />
+                                                            </div>
+
+                                                            <div class="body">
+                                                                <div class="name">
+                                                                    <a href="#">Phil Doe</a>
+                                                                </div>
+
+                                                                <div class="time">
+                                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                                    <span class="green">2 days ago</span>
+                                                                </div>
+
+                                                                <div>
+                                                                    <span class="label label-info label-sm arrowed-in arrowed-in-right">online</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="itemdiv memberdiv">
+                                                            <div class="user">
+                                                                <img alt="Alexa Doe's avatar" src="../assets/avatars/avatar1.png" />
+                                                            </div>
+
+                                                            <div class="body">
+                                                                <div class="name">
+                                                                    <a href="#">Alexa Doe</a>
+                                                                </div>
+
+                                                                <div class="time">
+                                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                                    <span class="green">3 days ago</span>
+                                                                </div>
+
+                                                                <div>
+                                                                    <span class="label label-success label-sm arrowed-in">approved</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="space-4"></div>
+
+                                                    <div class="center">
+                                                        <i class="ace-icon fa fa-users fa-2x green middle"></i>
+
+                                                        &nbsp;
+                                                        <a href="#" class="btn btn-sm btn-white btn-info">
+                                                            See all members &nbsp;
+                                                            <i class="ace-icon fa fa-arrow-right"></i>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="hr hr-double hr8"></div>
+
+                                                    <!-- /section:pages/dashboard.members -->
+                                                </div><!-- /.#member-tab -->
+
+                                                <div id="comment-tab" class="tab-pane">
+                                                    <!-- #section:pages/dashboard.comments -->
+                                                    <div class="comments">
+                                                        <div class="itemdiv commentdiv">
+                                                            <div class="user">
+                                                                <img alt="Bob Doe's Avatar" src="../assets/avatars/avatar.png" />
+                                                            </div>
+
+                                                            <div class="body">
+                                                                <div class="name">
+                                                                    <a href="#">Bob Doe</a>
+                                                                </div>
+
+                                                                <div class="time">
+                                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                                    <span class="green">6 min</span>
+                                                                </div>
+
+                                                                <div class="text">
+                                                                    <i class="ace-icon fa fa-quote-left"></i>
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tools">
+                                                                <div class="inline position-relative">
+                                                                    <button class="btn btn-minier bigger btn-yellow dropdown-toggle" data-toggle="dropdown">
+                                                                        <i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+                                                                    </button>
+
+                                                                    <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                                        <li>
+                                                                            <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																						<span class="green">
+																							<i class="ace-icon fa fa-check bigger-110"></i>
+																						</span>
+                                                                            </a>
+                                                                        </li>
+
+                                                                        <li>
+                                                                            <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																						<span class="orange">
+																							<i class="ace-icon fa fa-times bigger-110"></i>
+																						</span>
+                                                                            </a>
+                                                                        </li>
+
+                                                                        <li>
+                                                                            <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																						<span class="red">
+																							<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																						</span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="itemdiv commentdiv">
+                                                            <div class="user">
+                                                                <img alt="Jennifer's Avatar" src="../assets/avatars/avatar1.png" />
+                                                            </div>
+
+                                                            <div class="body">
+                                                                <div class="name">
+                                                                    <a href="#">Jennifer</a>
+                                                                </div>
+
+                                                                <div class="time">
+                                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                                    <span class="blue">15 min</span>
+                                                                </div>
+
+                                                                <div class="text">
+                                                                    <i class="ace-icon fa fa-quote-left"></i>
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tools">
+                                                                <div class="action-buttons bigger-125">
+                                                                    <a href="#">
+                                                                        <i class="ace-icon fa fa-pencil blue"></i>
+                                                                    </a>
+
+                                                                    <a href="#">
+                                                                        <i class="ace-icon fa fa-trash-o red"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="itemdiv commentdiv">
+                                                            <div class="user">
+                                                                <img alt="Joe's Avatar" src="../assets/avatars/avatar2.png" />
+                                                            </div>
+
+                                                            <div class="body">
+                                                                <div class="name">
+                                                                    <a href="#">Joe</a>
+                                                                </div>
+
+                                                                <div class="time">
+                                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                                    <span class="orange">22 min</span>
+                                                                </div>
+
+                                                                <div class="text">
+                                                                    <i class="ace-icon fa fa-quote-left"></i>
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tools">
+                                                                <div class="action-buttons bigger-125">
+                                                                    <a href="#">
+                                                                        <i class="ace-icon fa fa-pencil blue"></i>
+                                                                    </a>
+
+                                                                    <a href="#">
+                                                                        <i class="ace-icon fa fa-trash-o red"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="itemdiv commentdiv">
+                                                            <div class="user">
+                                                                <img alt="Rita's Avatar" src="../assets/avatars/avatar3.png" />
+                                                            </div>
+
+                                                            <div class="body">
+                                                                <div class="name">
+                                                                    <a href="#">Rita</a>
+                                                                </div>
+
+                                                                <div class="time">
+                                                                    <i class="ace-icon fa fa-clock-o"></i>
+                                                                    <span class="red">50 min</span>
+                                                                </div>
+
+                                                                <div class="text">
+                                                                    <i class="ace-icon fa fa-quote-left"></i>
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tools">
+                                                                <div class="action-buttons bigger-125">
+                                                                    <a href="#">
+                                                                        <i class="ace-icon fa fa-pencil blue"></i>
+                                                                    </a>
+
+                                                                    <a href="#">
+                                                                        <i class="ace-icon fa fa-trash-o red"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="hr hr8"></div>
+
+                                                    <div class="center">
+                                                        <i class="ace-icon fa fa-comments-o fa-2x green middle"></i>
+
+                                                        &nbsp;
+                                                        <a href="#" class="btn btn-sm btn-white btn-info">
+                                                            See all comments &nbsp;
+                                                            <i class="ace-icon fa fa-arrow-right"></i>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="hr hr-double hr8"></div>
+
+                                                    <!-- /section:pages/dashboard.comments -->
+                                                </div>
+                                            </div>
+                                        </div><!-- /.widget-main -->
+                                    </div><!-- /.widget-body -->
+                                </div><!-- /.widget-box -->
+                            </div><!-- /.col -->
+
+                            <div class="col-sm-6">
+                                <div class="widget-box">
+                                    <div class="widget-header">
+                                        <h4 class="widget-title lighter smaller">
+                                            <i class="ace-icon fa fa-comment blue"></i>
+                                            Conversation
+                                        </h4>
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main no-padding">
+                                            <!-- #section:pages/dashboard.conversations -->
+                                            <div class="dialogs">
+                                                <div class="itemdiv dialogdiv">
+                                                    <div class="user">
+                                                        <img alt="Alexa's Avatar" src="../assets/avatars/avatar1.png" />
+                                                    </div>
+
+                                                    <div class="body">
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o"></i>
+                                                            <span class="green">4 sec</span>
+                                                        </div>
+
+                                                        <div class="name">
+                                                            <a href="#">Alexa</a>
+                                                        </div>
+                                                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+
+                                                        <div class="tools">
+                                                            <a href="#" class="btn btn-minier btn-info">
+                                                                <i class="icon-only ace-icon fa fa-share"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itemdiv dialogdiv">
+                                                    <div class="user">
+                                                        <img alt="John's Avatar" src="../assets/avatars/avatar.png" />
+                                                    </div>
+
+                                                    <div class="body">
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o"></i>
+                                                            <span class="blue">38 sec</span>
+                                                        </div>
+
+                                                        <div class="name">
+                                                            <a href="#">John</a>
+                                                        </div>
+                                                        <div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
+
+                                                        <div class="tools">
+                                                            <a href="#" class="btn btn-minier btn-info">
+                                                                <i class="icon-only ace-icon fa fa-share"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itemdiv dialogdiv">
+                                                    <div class="user">
+                                                        <img alt="Bob's Avatar" src="../assets/avatars/user.jpg" />
+                                                    </div>
+
+                                                    <div class="body">
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o"></i>
+                                                            <span class="orange">2 min</span>
+                                                        </div>
+
+                                                        <div class="name">
+                                                            <a href="#">Bob</a>
+                                                            <span class="label label-info arrowed arrowed-in-right">admin</span>
+                                                        </div>
+                                                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+
+                                                        <div class="tools">
+                                                            <a href="#" class="btn btn-minier btn-info">
+                                                                <i class="icon-only ace-icon fa fa-share"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itemdiv dialogdiv">
+                                                    <div class="user">
+                                                        <img alt="Jim's Avatar" src="../assets/avatars/avatar4.png" />
+                                                    </div>
+
+                                                    <div class="body">
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o"></i>
+                                                            <span class="grey">3 min</span>
+                                                        </div>
+
+                                                        <div class="name">
+                                                            <a href="#">Jim</a>
+                                                        </div>
+                                                        <div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
+
+                                                        <div class="tools">
+                                                            <a href="#" class="btn btn-minier btn-info">
+                                                                <i class="icon-only ace-icon fa fa-share"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itemdiv dialogdiv">
+                                                    <div class="user">
+                                                        <img alt="Alexa's Avatar" src="../assets/avatars/avatar1.png" />
+                                                    </div>
+
+                                                    <div class="body">
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o"></i>
+                                                            <span class="green">4 min</span>
+                                                        </div>
+
+                                                        <div class="name">
+                                                            <a href="#">Alexa</a>
+                                                        </div>
+                                                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+                                                        <div class="tools">
+                                                            <a href="#" class="btn btn-minier btn-info">
+                                                                <i class="icon-only ace-icon fa fa-share"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- /section:pages/dashboard.conversations -->
+                                            <form>
+                                                <div class="form-actions">
+                                                    <div class="input-group">
+                                                        <input placeholder="Type your message here ..." type="text" class="form-control" name="message" />
+                                                        <span class="input-group-btn">
+																	<button class="btn btn-sm btn-info no-radius" type="button">
+																		<i class="ace-icon fa fa-share"></i>
+																		Send
+																	</button>
+																</span>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div><!-- /.widget-main -->
+                                    </div><!-- /.widget-body -->
+                                </div><!-- /.widget-box -->
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+
+                        <!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+
+    <div class="footer">
+        <div class="footer-inner">
+            <!-- #section:basics/footer -->
+            <div class="footer-content">
+						<span class="bigger-120">
+							<span class="blue bolder">Ace</span>
+							Application &copy; 2013-2014
+						</span>
+
+                &nbsp; &nbsp;
+                <span class="action-buttons">
+							<a href="#">
+								<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+							</a>
+
+							<a href="#">
+								<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+							</a>
+
+							<a href="#">
+								<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+							</a>
+						</span>
+            </div>
+
+            <!-- /section:basics/footer -->
         </div>
     </div>
-    <!-- END QUICK SIDEBAR -->
-</div>
-<!-- END CONTAINER -->
-<!-- BEGIN FOOTER -->
-<div class="page-footer">
-    <div class="page-footer-inner"> 2015 &copy; Metronic by keenthemes.
-        <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
-    </div>
-    <div class="scroll-to-top">
-        <i class="icon-arrow-up"></i>
-    </div>
-</div>
-<!-- END FOOTER -->
-<!--[if lt IE 9]>
-<script src="../static/assets/global/plugins/respond.min.js"></script>
-<script src="../static/assets/global/plugins/excanvas.min.js"></script>
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div><!-- /.main-container -->
+
+<!-- basic scripts -->
+
+<!--[if !IE]> -->
+<script src="/static/components/jquery/dist/jquery.js"></script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script src="/static/components/jquery.1x/dist/jquery.js"></script>
 <![endif]-->
-<!-- BEGIN CORE PLUGINS -->
-<script src="../static/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
-<!-- END CORE PLUGINS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="../static/assets/global/plugins/moment.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/morris/morris.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/morris/raphael-min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/amcharts/amcharts/radar.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/amcharts/amcharts/themes/patterns.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/amcharts/amcharts/themes/chalk.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/amcharts/ammap/ammap.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/amcharts/ammap/maps/js/worldLow.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/amcharts/amstockcharts/amstock.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
-<script src="../static/ssets/global/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js" type="text/javascript"></script>
-<script src="../static/assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL PLUGINS -->
-<!-- BEGIN THEME GLOBAL SCRIPTS -->
-<script src="../static/assets/global/scripts/app.min.js" type="text/javascript"></script>
-<!-- END THEME GLOBAL SCRIPTS -->
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="../static/assets/pages/scripts/dashboard.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL SCRIPTS -->
-<!-- BEGIN THEME LAYOUT SCRIPTS -->
-<script src="../static/assets/layouts/layout2/scripts/layout.min.js" type="text/javascript"></script>
-<script src="../static/assets/layouts/layout2/scripts/demo.min.js" type="text/javascript"></script>
-<script src="../static/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
-<!-- END THEME LAYOUT SCRIPTS -->
+<script type="text/javascript">
+    if('ontouchstart' in document.documentElement) document.write("<script src='/static/components/_mod/jquery.mobile.custom/jquery.mobile.custom.js'>"+"<"+"/script>");
+</script>
+<script src="/static/components/bootstrap/dist/js/bootstrap.js"></script>
+
+<!-- page specific plugin scripts -->
+
+<!--[if lte IE 8]>
+<script src="/static/components/ExplorerCanvas/excanvas.js"></script>
+<![endif]-->
+<script src="/static/components/_mod/jquery-ui.custom/jquery-ui.custom.js"></script>
+<script src="/static/components/jqueryui-touch-punch/jquery.ui.touch-punch.js"></script>
+<script src="/static/components/_mod/easypiechart/jquery.easypiechart.js"></script>
+<script src="/static/components/jquery.sparkline/index.js"></script>
+<script src="/static/components/Flot/jquery.flot.js"></script>
+<script src="/static/components/Flot/jquery.flot.pie.js"></script>
+<script src="/static/components/Flot/jquery.flot.resize.js"></script>
+
+<!-- ace scripts -->
+<script src="/static/assets/js/src/elements.scroller.js"></script>
+<script src="/static/assets/js/src/elements.colorpicker.js"></script>
+<script src="/static/assets/js/src/elements.fileinput.js"></script>
+<script src="/static/assets/js/src/elements.typeahead.js"></script>
+<script src="/static/assets/js/src/elements.wysiwyg.js"></script>
+<script src="/static/assets/js/src/elements.spinner.js"></script>
+<script src="/static/assets/js/src/elements.treeview.js"></script>
+<script src="/static/assets/js/src/elements.wizard.js"></script>
+<script src="/static/assets/js/src/elements.aside.js"></script>
+<script src="/static/assets/js/src/ace.js"></script>
+<script src="/static/assets/js/src/ace.basics.js"></script>
+<script src="/static/assets/js/src/ace.scrolltop.js"></script>
+<script src="/static/assets/js/src/ace.ajax-content.js"></script>
+<script src="/static/assets/js/src/ace.touch-drag.js"></script>
+<script src="/static/assets/js/src/ace.sidebar.js"></script>
+<script src="/static/assets/js/src/ace.sidebar-scroll-1.js"></script>
+<script src="/static/assets/js/src/ace.submenu-hover.js"></script>
+<script src="/static/assets/js/src/ace.widget-box.js"></script>
+<script src="/static/assets/js/src/ace.settings.js"></script>
+<script src="/static/assets/js/src/ace.settings-rtl.js"></script>
+<script src="/static/assets/js/src/ace.settings-skin.js"></script>
+<script src="/static/assets/js/src/ace.widget-on-reload.js"></script>
+<script src="/static/assets/js/src/ace.searchbox-autocomplete.js"></script>
+
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    jQuery(function($) {
+        $('.easy-pie-chart.percentage').each(function(){
+            var $box = $(this).closest('.infobox');
+            var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
+            var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
+            var size = parseInt($(this).data('size')) || 50;
+            $(this).easyPieChart({
+                barColor: barColor,
+                trackColor: trackColor,
+                scaleColor: false,
+                lineCap: 'butt',
+                lineWidth: parseInt(size/10),
+                animate: ace.vars['old_ie'] ? false : 1000,
+                size: size
+            });
+        })
+
+        $('.sparkline').each(function(){
+            var $box = $(this).closest('.infobox');
+            var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
+            $(this).sparkline('html',
+                {
+                    tagValuesAttribute:'data-values',
+                    type: 'bar',
+                    barColor: barColor ,
+                    chartRangeMin:$(this).data('min') || 0
+                });
+        });
+
+
+        //flot chart resize plugin, somehow manipulates default browser resize event to optimize it!
+        //but sometimes it brings up errors with normal resize event handlers
+        $.resize.throttleWindow = false;
+
+        var placeholder = $('#piechart-placeholder').css({'width':'90%' , 'min-height':'150px'});
+        var data = [
+            { label: "social networks",  data: 38.7, color: "#68BC31"},
+            { label: "search engines",  data: 24.5, color: "#2091CF"},
+            { label: "ad campaigns",  data: 8.2, color: "#AF4E96"},
+            { label: "direct traffic",  data: 18.6, color: "#DA5430"},
+            { label: "other",  data: 10, color: "#FEE074"}
+        ]
+        function drawPieChart(placeholder, data, position) {
+            $.plot(placeholder, data, {
+                series: {
+                    pie: {
+                        show: true,
+                        tilt:0.8,
+                        highlight: {
+                            opacity: 0.25
+                        },
+                        stroke: {
+                            color: '#fff',
+                            width: 2
+                        },
+                        startAngle: 2
+                    }
+                },
+                legend: {
+                    show: true,
+                    position: position || "ne",
+                    labelBoxBorderColor: null,
+                    margin:[-30,15]
+                }
+                ,
+                grid: {
+                    hoverable: true,
+                    clickable: true
+                }
+            })
+        }
+        drawPieChart(placeholder, data);
+
+        /**
+         we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
+         so that's not needed actually.
+         */
+        placeholder.data('chart', data);
+        placeholder.data('draw', drawPieChart);
+
+
+        //pie chart tooltip example
+        var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
+        var previousPoint = null;
+
+        placeholder.on('plothover', function (event, pos, item) {
+            if(item) {
+                if (previousPoint != item.seriesIndex) {
+                    previousPoint = item.seriesIndex;
+                    var tip = item.series['label'] + " : " + item.series['percent']+'%';
+                    $tooltip.show().children(0).text(tip);
+                }
+                $tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
+            } else {
+                $tooltip.hide();
+                previousPoint = null;
+            }
+
+        });
+
+        /////////////////////////////////////
+        $(document).one('ajaxloadstart.page', function(e) {
+            $tooltip.remove();
+        });
+
+
+
+
+        var d1 = [];
+        for (var i = 0; i < Math.PI * 2; i += 0.5) {
+            d1.push([i, Math.sin(i)]);
+        }
+
+        var d2 = [];
+        for (var i = 0; i < Math.PI * 2; i += 0.5) {
+            d2.push([i, Math.cos(i)]);
+        }
+
+        var d3 = [];
+        for (var i = 0; i < Math.PI * 2; i += 0.2) {
+            d3.push([i, Math.tan(i)]);
+        }
+
+
+        var sales_charts = $('#sales-charts').css({'width':'100%' , 'height':'220px'});
+        $.plot("#sales-charts", [
+            { label: "Domains", data: d1 },
+            { label: "Hosting", data: d2 },
+            { label: "Services", data: d3 }
+        ], {
+            hoverable: true,
+            shadowSize: 0,
+            series: {
+                lines: { show: true },
+                points: { show: true }
+            },
+            xaxis: {
+                tickLength: 0
+            },
+            yaxis: {
+                ticks: 10,
+                min: -2,
+                max: 2,
+                tickDecimals: 3
+            },
+            grid: {
+                backgroundColor: { colors: [ "#fff", "#fff" ] },
+                borderWidth: 1,
+                borderColor:'#555'
+            }
+        });
+
+
+        $('#recent-box [data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+        function tooltip_placement(context, source) {
+            var $source = $(source);
+            var $parent = $source.closest('.tab-content')
+            var off1 = $parent.offset();
+            var w1 = $parent.width();
+
+            var off2 = $source.offset();
+            //var w2 = $source.width();
+
+            if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+            return 'left';
+        }
+
+
+        $('.dialogs,.comments').ace_scroll({
+            size: 300
+        });
+
+
+        //Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+        //so disable dragging when clicking on label
+        var agent = navigator.userAgent.toLowerCase();
+        if(ace.vars['touch'] && ace.vars['android']) {
+            $('#tasks').on('touchstart', function(e){
+                var li = $(e.target).closest('#tasks li');
+                if(li.length == 0)return;
+                var label = li.find('label.inline').get(0);
+                if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
+            });
+        }
+
+        $('#tasks').sortable({
+                opacity:0.8,
+                revert:true,
+                forceHelperSize:true,
+                placeholder: 'draggable-placeholder',
+                forcePlaceholderSize:true,
+                tolerance:'pointer',
+                stop: function( event, ui ) {
+                    //just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+                    $(ui.item).css('z-index', 'auto');
+                }
+            }
+        );
+        $('#tasks').disableSelection();
+        $('#tasks input:checkbox').removeAttr('checked').on('click', function(){
+            if(this.checked) $(this).closest('li').addClass('selected');
+            else $(this).closest('li').removeClass('selected');
+        });
+
+
+        //show the dropdowns on top or bottom depending on window height and menu position
+        $('#task-tab .dropdown-hover').on('mouseenter', function(e) {
+            var offset = $(this).offset();
+
+            var $w = $(window)
+            if (offset.top > $w.scrollTop() + $w.innerHeight() - 100)
+                $(this).addClass('dropup');
+            else $(this).removeClass('dropup');
+        });
+
+    })
+</script>
+
+<!-- the following scripts are used in demo only for onpage help and you don't need them -->
+<link rel="stylesheet" href="/static/assets/css/ace.onpage-help.css" />
+<link rel="stylesheet" href="/static/docs/assets/js/themes/sunburst.css" />
+
+<script type="text/javascript"> ace.vars['base'] = '..'; </script>
+<script src="/static/assets/js/src/elements.onpage-help.js"></script>
+<script src="/static/assets/js/src/ace.onpage-help.js"></script>
+<script src="/static/docs/assets/js/rainbow.js"></script>
+<script src="/static/docs/assets/js/language/generic.js"></script>
+<script src="/static/docs/assets/js/language/html.js"></script>
+<script src="/static/docs/assets/js/language/css.js"></script>
+<script src="/static/docs/assets/js/language/javascript.js"></script>
 </body>
 </html>
